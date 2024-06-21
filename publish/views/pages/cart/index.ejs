@@ -1,0 +1,299 @@
+<div class="contents-area-page cart-page">
+    <h1 class="title-h1 pc">장바구니</h1>
+    <div class="contents-area">
+        <div class="contents-left">
+            <!-- 전체선택 -->
+            <div class="select-all-wrap">
+                <div class="select-all">
+                    <label class="circle-checkbox"><input type="checkbox"><i></i></label>
+                    전체선택
+                </div>
+                <button class="btn btn-default btn-round btn-delete">선택삭제</button>
+            </div>
+            <!-- 장바구니/주문서 리스트 -->
+            <div class="brand-container"> <!-- 반복요소 brand-container -->
+                <div class="brand-name"> <label class="circle-checkbox"><input type="checkbox"><i></i></label>스윙앤슬라이드
+                    업체명(N)
+                </div>
+                <div class="brand-wrap">
+                    <div class="product-list-container"> <!-- 반복요소 product-list-container -->
+                        <ul class="product-list-wrap">
+                            <li class="product-list cart-list sold-out"> <!-- 반복요소 product-list -->
+                                <i class="btn-close"></i>
+                                <div class="product-info-group">
+                                    <div class="product-info info1">
+                                        <!-- 아이템 -->
+                                        <div class="product-item">
+                                            <div class="item-list-container horizon">
+                                                <div class="item-list">
+                                                    <!-- 체크박스 -->
+                                                    <label class="circle-checkbox"><input type="checkbox"><i></i></label>
+                                                    <!-- 아이템 썸네일 영역 -->
+                                                    <div class="thumbnail-container sold-out">
+                                                        <div class="sold-out-wrap">
+                                                            <span>
+                                                                <img src="/static/content/image/sample/sold-out.png" alt="품절">
+                                                            </span>
+                                                        </div>
+                                                        <div class="thumbnail-wrap">
+                                                            <div class="thumbnail-area">
+                                                                <img class="top-left"
+                                                                    src="/static/content/image/sample/thum_area.png"
+                                                                    alt="플로팅이미지" />
+                                                                <img class="top-right"
+                                                                    src="/static/content/image/sample/thum_area.png"
+                                                                    alt="플로팅이미지" />
+                                                                <img class="bottom-left"
+                                                                    src="/static/content/image/sample/thum_area.png"
+                                                                    alt="플로팅이미지" />
+                                                                <img class="bottom-right"
+                                                                    src="/static/content/image/sample/thum_area.png"
+                                                                    alt="플로팅이미지" />
+                                                                <img class="center-center">
+                                                            </div>
+                                                            <img class="thumbnail" src="/static/content/image/sample/thum.png"
+                                                                alt="썸네일">
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="user-ico user-attention">관심상품</div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 아이템 정보 영역 -->
+                                                    <div class="info-container">
+                                                        <div class="title-main paragraph-ellipsis">
+                                                            <b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는
+                                                            영역
+                                                            50g
+                                                            X 2 제품명이 노출되는 영역 50g X 2
+                                                        </div>
+                                                        <div class="title-sub paragraph-ellipsis">
+                                                            <b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브
+                                                            타이틀
+                                                            서브
+                                                            타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+                                                            서브 타이틀 서브 타이틀 서브 타이틀 서브
+                                                            타이틀
+                                                        </div>
+                                                        <div class="underline red" onclick="salesOnUI.modal('.modal-product-detail');">
+                                                            구성 상품 보기
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="item-gift">
+                                                <span><i>선물</i>구매 사은품</span>
+                                                <span>루카랩 케어베어 씰 스티커 외 N1개</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info info2">
+                                        <div class="product-info2-price">
+                                            <p>상품가 21,000</p>
+                                            <p>할인 6,000</p>
+                                        </div>
+                                        <p class="discounted">할인적용가 20,000</p>
+                                    </div>
+                                    <div class="product-info info3">
+                                        <div class="quantity-wrap">
+                                            <div class="quantity-box">
+                                                <button type="button" class="btn-quantity btn-minus"></button>
+                                                <input type="number" title="수량" readonly value="1" maxlength="999"
+                                                    class="quantity number">
+                                                <button type="button" class="btn-quantity btn-plus"></button>
+                                            </div>
+    
+                                            <button class="btn btn-change">변경</button>
+                                        </div>
+                                        <button class="btn btn-primary-line btn-buynow">바로구매</button>
+                                    </div>
+
+                                </div>
+                                <div class="product-price">
+                                    <div class="price-info info1">
+                                        <p>상품금액 2,000원 + 배송비 3,000원<b>= 23,000원</b></p>
+                                        <p>(<b>30,000원 이상</b> 무료배송)</p>
+                                    </div>
+                                    <div class="price-info info2">
+                                        <p>판매자 조건부<b>(본사)</b></p>
+                                        <i class="tooltip-handler">!</i>
+                                        <div class="tooltip-wrap">
+                                            <div class="dimmed-bg" data-dismiss-tooltip></div>
+                                            <div class="text-center tooltip-content tooltip-delivery">
+                                                <button class="btn-tooltip-close" data-dismiss-tooltip>닫기</button>
+                                                <p class="tooltip-tit">판매자 조건부 무료배송</p>
+                                                <p class="txt2">판매자 상품 30,000원 이상 구매 시 무료,<br />
+                                                    30,000원 미만 구매 시 2,500원 부과 </p>
+                                                <p class="txt1">제주/도서산간</p>
+                                                <p class="txt2">제주 2,500원 추가 / 도서산간 2,500원 추가</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <!-- 총금액 -->
+            <div class="total-product pc">
+                <h3 class="content-title"><i class="ico"><img src="/static/content/image/ico/ico_money.svg"
+                            alt="전체 상품 합계"></i>전체 상품 합계</h3>
+                <div class="price-info-wrap">
+                    <div class="price-info">
+                        <p>총 상품금액</p>
+                        <p>9,999,999<b>원</b></p>
+                    </div>
+                    <div class="operator">+</div>
+                    <div class="price-info">
+                        <p>배송비</p>
+                        <p>9,999,999<b>원</b></p>
+                    </div>
+                    <div class="operator">-</div>
+                    <div class="price-info">
+                        <p>할인혜택</p>
+                        <p>9,999,999<b>원</b></p>
+                    </div>
+                    <div class="operator">=</div>
+                    <div class="price-info final">
+                        <p>최종 결제금액</p>
+                        <p>9,999,999<b>원</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="total-product mobile">
+                <h3 class="content-title"><i class="ico"><img src="/static/content/image/ico/ico_money.svg"
+                            alt="전체 상품 합계"></i>전체 상품 합계</h3>
+                <div class="price-info-wrap">
+                    <div class="price-info">
+                        <p>총 상품금액</p>
+                        <p>9,999,999<b>원</b></p>
+                    </div>
+                    <div class="price-info">
+                        <p>배송비</p>
+                        <p>9,999,999<b>원</b></p>
+                    </div>
+                    <div class="price-info">
+                        <p>할인혜택</p>
+                        <p>9,999,999<b>원</b></p>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-bottom mobile">
+                <div class="price-info final">
+                    <p>결제 예정 금액(NN)</p>
+                    <p>9,999,999<b>원</b></p>
+                </div>
+                <button class="btn btn-primary btn-buy">주문하기(N)</button>
+            </div>
+        </div>
+        <div class="contents-right">
+            <!-- 플로팅 어사이드 -->
+            <div class="floating-aside">
+                <div class="floating-contents">
+                    <div class="title">최종 결제금액</div>
+                    <ul class="content">
+                        <li>
+                            <p>총 상품금액</p>
+                            <p>145,000<b>원</b></p>
+                        </li>
+                        <li>
+                            <p>배송비</p>
+                            <p>+ 145,000<b>원</b></p>
+                        </li>
+                        <li class="benefit">
+                            <p>총 할인혜택</p>
+                            <p>- 145,000<b>원</b></p>
+                        </li>
+                        <li class="point">
+                            <p>적립예정 포인트</p>
+                            <p>200,000 P</p>
+                        </li>
+                    </ul>
+                    <div class="total">
+                        <p>114,450<b>원</b></p>
+                    </div>
+                    <button class="btn btn-primary btn-round btn-floating">주문하기</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- 노컨텐츠 -->
+    <div class="no-contents">
+        <img src="/static/content/image/item/no-contents.svg" alt="상품없음">
+        <p>엇? 장바구니에 아무것도 없어요<br>
+            상품을 둘러볼까요? :D</p>
+        <button class="btn btn-primary-line btn-round btn-home">메인으로</button>
+    </div>
+
+    <!-- 구성상품 -->
+    <div class="modal modal-product-detail">
+        <div class="modal-wrap">
+            <button class="modal-close" data-dismiss>닫기</button>
+            <div class="modal-header">
+                구성상품
+            </div>
+            <div class="p-2 modal-body">
+                <!-- 아이템 리스트 horizon -->
+                <div class="item-list-container horizon">
+                    <!-- 반복 요소 item-list -->
+                    <div class="item-list">
+                        <!-- 아이템 썸네일 영역 -->
+                        <div class="thumbnail-container sold-out">
+                            <div class="sold-out-wrap">
+                                <span>
+                                    <img src="/static/content/image/sample/sold-out.png" alt="품절">
+                                </span>
+                            </div>
+                            <div class="thumbnail-wrap">
+                                <div class="thumbnail-area">
+                                    <img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+                                    <img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+                                    <img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+                                    <img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+                                    <img class="center-center">
+                                </div>
+                                <img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일">
+                            </div>
+                        </div>
+                        <!-- 아이템 정보 영역 -->
+                        <div class="info-container">
+                            <div class="title-main paragraph-ellipsis">
+                                <b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역
+                                50g X 2
+                            </div>
+                            <div class="title-sub paragraph-ellipsis">
+                                <b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+                                서브 타이틀 서브
+                                타이틀 서브 타이틀
+                                서브 타이틀 서브 타이틀 서브 타이틀 서브
+                                타이틀
+                            </div>
+                            <div class="underline red">
+                                구성 상품 보기
+                            </div>
+                            <div class="purchase-amount">
+                                <p class="price">9,999,999원</p>
+                                <p class="amount">수량 999개</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dimmed-bg" data-dismiss></div>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    // scroll event ui
+	salesOnUI.scrollEvent('.contents-area');
+
+    // tooltip event ui sample
+    salesOnUI.tooltip('.tooltip-handler');
+});
+</script>

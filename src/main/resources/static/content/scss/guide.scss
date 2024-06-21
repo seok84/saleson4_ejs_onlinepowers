@@ -1,0 +1,259 @@
+@import 'common';
+
+// guide header, footer
+.guide-header {
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    padding: 2rem 0;
+    margin: 0 0 2rem;
+    background: $bgLight;
+    position: relative;
+}
+
+#btn-gnb {
+    position: $offset;
+    top: 50%;
+    right: 2rem;
+    font-size: 0;
+    transform: translateY(-50%);
+    border: 0;
+    border-radius: .3rem;
+    cursor: pointer;
+    
+    &:before {
+        content: '\2630';
+        font-size: 1.8rem;
+        font-weight: bold;
+    }    
+}
+
+.guide-footer {
+    padding: 2rem 0;
+    font-size: 1.4rem;
+    background: $bgLight;
+    text-align: center;
+}
+
+.guide-tabs {
+    display: flex;
+    justify-content: space-around;
+    border-bottom: .1rem solid $lineBlackDark;
+    margin: 0 0 2rem; 
+
+    .tab-item {
+        display: inline-flex;
+        padding: 2rem 0;
+        cursor: pointer;
+        position: relative;
+        
+        a {
+            font-size: 2rem;
+            text-decoration: none;
+            color: $fontBlackShade;
+        }
+        > ul {
+            position: $offset;
+            
+        }
+    }
+        
+}
+
+#guide-button-back {
+    display: $inlineBlock;
+    font-size: 0;
+    text-decoration: none;
+    position: $offset;
+    top: calc(50% - 1.2rem);
+    left: 2rem;
+    border: 0;
+    
+    &:after {
+        content: "\276E";
+        font-size: 2rem;
+    }
+    
+}
+
+.guide-content {
+    width: 100%;
+    max-width: $width;
+    margin: 0 auto 2rem;
+    text-align: left;
+
+    .guide-modal-area{
+        position: relative;
+        
+        .modal{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dimmed-bg{
+            position: absolute;
+        }
+        .toast-wrap{
+            position: absolute;
+        }
+    }
+}
+
+.guide-subtabs {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 0 0 2rem;
+
+    .tab-item {
+        display: flex;
+        padding: 1rem 2rem;
+        font-size: 1.8rem;
+        background: $bgGreyLight;
+        border: .1rem solid $lineShade;
+        border-left: 0;
+
+        &:first-of-type {
+            border-left: .1rem solid $lineShade;
+        }
+
+        &.active {
+            background: $bgBlack;
+            color: $colorWhite;
+        }
+    }
+}
+
+.guide-components {
+    font-size: 1.4rem;
+
+    h2,
+    h3 {
+        font-size: 1.8rem;
+        font-weight: bold;
+        margin: 0 0 2rem;
+    }
+
+    h3 {
+        font-size: 1.6rem;
+    }
+}
+
+.guide-code {
+    display: block;
+    width: $full;
+    padding: 2rem 1rem;
+    text-align: left;
+    border: .1rem solid $lineShade;
+    border-radius: .5rem;
+    margin: 3rem 0;
+    box-sizing: border-box;
+    overflow-x: auto;
+}
+
+
+.guide-color-list {
+    padding-top: 1rem;
+    width: $full;
+    
+    li {
+        font-size: 2rem;
+        font-weight: bold;
+        padding: 1rem;
+        margin: 0 0 1rem;
+    }
+        
+    .primaryColor {
+        background: $brandPrimary;
+        color: $colorWhite;
+    }
+
+    .secondColor {
+        background: $brandSecondary;
+        color: $colorWhite;
+    }
+
+    .redColor {
+        background: $pointDanger;
+    }
+
+    .lineColor {
+        border-bottom: 1px solid $lineGrey;
+    }
+
+    .lineColor2 {
+        border-bottom: 1px solid $lineLight;
+    }
+
+    .bgLight {
+        background: $bgLight;
+    }
+
+    .blackColor {
+        color: $colorBlack;
+    }
+
+    .blackColor2 {
+        color: $fontBlackDark;
+    }
+
+    .fontSubColor {
+        color: $fontDark;
+    }
+
+    .fontLightColor {
+        color: $fontLight;
+    }
+
+    .fontColor {
+        color: $fontGrey;
+    }
+
+    .fontColor2 {
+        color: $colorBlack;
+    }
+
+    .buttonColor {
+        .btn {
+            background: $bgDarkMedium;
+            color: $colorWhite;
+        }
+    }
+
+    .btnFontColor {
+        color: $btnFontColor;
+    }
+
+
+}
+
+
+.mypage-btn-wrap-guide{
+    .mypage{
+        .order-item{
+            &,
+            .order-status {
+                display: flex;
+                width: 100%;
+                align-items: flex-start;
+                justify-content: flex-start;
+                flex-wrap: wrap;
+
+                .guide-box{
+                    flex:1;
+                    @include mobile{
+                        flex:none;
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include tablet {
+    .guide-subtabs {
+        flex-wrap: wrap;
+    }
+}

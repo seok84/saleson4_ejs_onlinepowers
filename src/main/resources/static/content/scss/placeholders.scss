@@ -1,0 +1,150 @@
+/* placeholders */
+%img {
+    width: $full; 
+    vertical-align: top;
+}
+
+%textLeft {
+    text-align: left;
+}
+
+%textCenter {
+    text-align: center;
+}
+
+%textRright {
+    text-align: right;
+}
+
+%floatLeft {
+    float: left;
+}
+
+%floatRight {
+    float: right;
+}
+
+%offsetLeft {
+    position: $offset; 
+    top: 0; 
+    left: 0;
+}
+
+%offsetRight {
+    position: $offset; 
+    top: 0; 
+    right: 0;
+}
+
+%offsetBottomLeft {
+    position: $offset;
+    bottom: 0;
+    left: 0;
+}
+
+%offsetBottomRright {
+    position: $offset; 
+    bottom: 0; 
+    right: 0;
+}
+
+%offsetCenter {
+    position: $offset; 
+    top: $half; 
+    left: $half; 
+    transform: translate(-$half, -$half);
+}
+
+%flexBetween {
+    display: $flex;
+    justify-content: space-between;
+}
+
+%flexBetweenCenter {
+    display: $flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+%flexAround {
+    display: $flex;
+    justify-content: space-around;
+}
+
+%flexCenter {
+    display: $flex;
+    justify-content: center;
+}
+
+%flexCenter02 {
+    display: $flex;
+    justify-content: center;
+    align-items: center;
+}
+
+%flexVCenter {
+    display: $flex;
+    align-items: center;
+}
+
+%fixedLeft {
+    position: $fixed;
+    top: 0; 
+    left: 0;
+}
+
+%fixedRight {
+    position: $fixed;
+    top: 0; 
+    right: 0;
+}
+
+%fixedBottomLeft {
+    position: $fixed;
+    bottom: 0;
+    left: 0;
+}
+
+%fixedBottomRright {
+    position: $fixed; 
+    bottom: 0; 
+    right: 0;
+}
+
+%fixedeCenter {
+    position: $fixed; 
+    top: $half; 
+    left: $half; 
+    transform: translate(-$half, -$half);
+}
+
+%after {
+    &:after 
+    {
+        content: ''; 
+        clear: both; 
+        display: $block;
+    }
+}
+
+%textHidden {
+    font-size: 0; 
+    text-indent: -9999px;
+}
+
+%ico {
+    display: $block;
+    background-repeat: no-repeat; 
+    background-size: contain;
+}
+
+%icoWhite {
+    background-image: url('../img/ico/ico_white.png'); 
+    background-repeat: no-repeat;
+}
+
+%arrBlack{
+    background-image: url('/static/content/image/ico/ico_toggle_arrow_down.svg');
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+}

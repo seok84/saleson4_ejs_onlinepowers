@@ -1,0 +1,20 @@
+server:
+  port: 8080
+
+saleson:
+  application.name: saleson-front-jsp
+
+  url:
+    backoffice: https://saleson4.onlinepowers.com
+    api: https://saleson4.onlinepowers.com
+    frontend: https://saleson4.onlinepowers.com
+    cdn:
+
+  root: ""
+  static-root: ${saleson.root}/storage/nfs
+  storage-root: ${saleson.root}/storage/nfs
+
+
+logging:
+  level:
+    org.springframework.web: INFO

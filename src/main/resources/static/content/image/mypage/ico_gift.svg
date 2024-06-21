@@ -1,0 +1,24 @@
+<svg id="그룹_36489" data-name="그룹 36489" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20">
+  <g id="사각형_31819" data-name="사각형 31819" fill="rgba(255,255,255,0)" stroke="rgba(112,112,112,0)" stroke-width="1">
+    <rect width="20" height="20" stroke="none"/>
+    <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+  </g>
+  <g id="그룹_36488" data-name="그룹 36488" transform="translate(3 2.748)">
+    <path id="패스_10982" data-name="패스 10982" d="M-12829.251-8553.6v-3.178l-3.6,2.118v1.9h3.6Z" transform="translate(12841.049 8556.779)" fill="#ada1ff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <path id="패스_10983" data-name="패스 10983" d="M-12832.851-8553.6v-3.178l3.6,2.118v1.9h-3.6Z" transform="translate(12835.05 8556.779)" fill="#ada1ff" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1"/>
+    <g id="사각형_31822" data-name="사각형 31822" transform="translate(4.602 0.6)" fill="#ada1ff" stroke="#000" stroke-width="1">
+      <rect width="4.799" height="4.584" rx="1" stroke="none"/>
+      <rect x="0.5" y="0.5" width="3.799" height="3.584" rx="0.5" fill="none"/>
+    </g>
+    <g id="그룹_36487" data-name="그룹 36487" transform="translate(0 3.252)">
+      <g id="사각형_31820" data-name="사각형 31820" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="14" height="12" rx="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="13" height="11" rx="0.5" fill="none"/>
+      </g>
+      <g id="사각형_31821" data-name="사각형 31821" transform="translate(5)" fill="#ada1ff" stroke="#000" stroke-width="1">
+        <rect width="4" height="12" stroke="none"/>
+        <rect x="0.5" y="0.5" width="3" height="11" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

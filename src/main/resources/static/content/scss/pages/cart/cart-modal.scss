@@ -1,0 +1,217 @@
+@import '../../common';
+
+.modal {
+
+    // 상품쿠폰적용
+    &.modal-apply-coupon .modal-wrap {
+        max-width: 84rem !important;
+
+        .modal-body {
+            padding: 0rem 2rem 0;
+        }
+
+        .modal-desc {
+            width: 100%;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            position: absolute;
+            top: 6rem;
+            padding: 2rem 0;
+            box-sizing: border-box;
+            background-color: $colorWhite;
+            font-size: 1.5rem;
+            z-index: 10;
+
+            span {
+                margin-left: .6rem;
+                color: $fontDark;
+            }
+        }
+
+        .brand-container {
+            position: relative;
+            margin: 6rem 0 9rem;
+        }
+
+        .brand-wrap {
+            border: 1px solid $lineLight;
+            @include round(.5rem);
+            max-height: 100%;
+            overflow-y: auto;
+            overflow-x: hidden;
+
+            .product-list-container {
+                border-bottom: 1px solid $lineLight;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                .product-list {
+
+                    &.cart-list,
+                    &.order-list,
+                    &.coupon-list {
+                        padding: 1rem 0 0rem;
+                    }
+
+                    .product-info {
+                        &.info2 {
+                            flex: unset;
+                            padding: 0 5rem;
+
+                            p:nth-child(2)::before {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .item-gift {
+            margin-left: 0;
+        }
+
+        .select-coupon {
+            padding: 2rem;
+            background-color: $bgLight;
+
+            .select-wrap {
+                margin-bottom: 0;
+            }
+        }
+
+        .product-price {
+            border-bottom: none;
+        }
+
+        .btn-wrap {
+            position: absolute;
+            bottom: 0;
+            width: $full;
+            max-width: unset;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 2rem 0;
+            background-color: $colorWhite;
+            z-index: 10;
+
+            .btn {
+                width: 16rem;
+                flex: unset;
+            }
+        }
+    }
+
+    // 구성상품
+    &.modal-product-detail .modal-wrap {
+        .item-list-container {
+            padding-left: 0;
+            padding-right: 0;
+
+            .item-list {
+                width: 100%;
+                border: 1px solid #F1F1F1;
+                @include round(.5rem);
+                margin-bottom: 1rem;
+                padding: 1.5rem;
+
+                &:last-child {
+                    margin-bottom: 0;
+                    ;
+                }
+            }
+        }
+    }
+
+    // 배송지 목록
+    &.modal-address-list .modal-wrap {
+        .modal-body {
+            padding: 0 2rem 2rem 2rem;
+
+            .address-list {
+                border-bottom: 1px solid $lineLight;
+                padding: 1.5rem;
+                background-color: $bgLight;
+
+                &:has(span.default) {
+                    background-color: $colorWhite;
+
+                }
+            }
+
+            .btn-wrap {
+                flex-wrap: wrap;
+                margin: 2rem auto 0;
+            }
+
+            .btn-add-address {
+                max-width: 32.8rem;
+                width: 100%;
+                margin: 1rem auto;
+                display: $block;
+                font-size: 1.6rem;
+            }
+        }
+    }
+
+}
+
+
+@include noMobile {
+    .modal {
+
+        // 팝업 안 툴팁
+        .tooltip-delivery {
+            width: auto;
+            top: unset !important;
+            bottom: 1rem !important;
+        }
+    }
+
+}
+
+@include mobile {
+    .modal {
+
+        // 상품쿠폰적용
+        &.modal-apply-coupon .modal-wrap {
+            .brand-wrap {
+                .product-list-container {
+                    .product-list {
+                        .product-info-group {
+                            padding-bottom: 0;
+
+                            .product-info {
+                                &.info2 {
+                                    padding: 0 2rem;
+                                }
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // 배송지 목록
+        &.modal-address-list .modal-wrap {
+            .modal-body {
+                padding: 0 0 2rem;
+
+                .address-list {
+                    border-bottom: 1px solid $lineLight;
+                    padding: 1.5rem;
+                    background-color: $bgLight;
+
+                    &:has(span.default) {
+                        background-color: $colorWhite;
+
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,101 @@
+/* mixin */
+@mixin ellipsis ($lines: 1) {
+  @if ($lines ==1) {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  @else {
+    display: -webkit-box;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: $lines;
+    -webkit-box-orient: vertical;
+  }
+}
+
+@mixin round ($arc ) {
+  border-radius: $arc;
+}
+
+@mixin rotate($arc ) {
+  transform: rotate($arc);
+}
+
+/*반응형, 브라우저 크기가 767px 이하일때*/
+@mixin mobile {
+  @media (max-width: $mobile ) {
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 767px 이상일때*/
+@mixin noMobile {
+  @media (min-width: $mobile ) {
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 1023px 이하일때*/
+@mixin tablet {
+  @media (max-width: $tablet ) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: $width+10 ) {
+    @content;
+  }
+}
+
+/*반응형, 브라우저 크기가 1024px 이상일때*/
+@mixin desktop {
+  @media (min-width: $desktop ) {
+    @content;
+  }
+}
+
+/*넓이, 높이 자동 계산함수*/
+@mixin square($size ) {
+  $calculated: 32px * $size;
+  width: $calculated;
+  height: $calculated;
+}
+
+/* Converting Hex to RGBa for background opacity */
+@mixin backgroundOpacity($color, $opacity: .7) {
+  background-color: $color; /* The Fallback */
+  background-color: rgba($color, $opacity);
+}
+
+@mixin borderOpacity($color, $opacity: .7) {
+  border: 1px solid rgba($color, $opacity); 
+}
+
+@mixin recolor($color: #000, $opacity: 1) {
+  $r: calc(red($color) / 255);
+  $g: calc(green($color) / 255);
+  $b: calc(blue($color) / 255);
+  $a: $opacity;
+
+  // grayscale fallback if SVG from data url is not supported
+  $lightness: lightness($color);
+  filter: saturate(0%) brightness(0%) invert($lightness) opacity($opacity);
+
+  // color filter
+  $svg-filter-id: "recolor";
+  filter: url('data:image/svg+xml;utf8,\
+  <svg xmlns="http://www.w3.org/2000/svg">\
+    <filter id="#{$svg-filter-id}" color-interpolation-filters="sRGB">\
+      <feColorMatrix type="matrix" values="\
+        0 0 0 0 #{$r}\
+        0 0 0 0 #{$g}\
+        0 0 0 0 #{$b}\
+        0 0 0 #{$a} 0\
+      "/>\
+    </filter>\
+  </svg>\
+  ##{$svg-filter-id}');
+}

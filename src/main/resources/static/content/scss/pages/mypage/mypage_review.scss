@@ -1,0 +1,148 @@
+@import 'mypage_main';
+
+/* 문의, 리뷰 공통 */
+.review-content{
+    >li{
+        @include round(.5rem);
+        border: .1rem solid $lineGrey;
+        padding: 2rem;
+
+        & + li {
+            margin-top: 2rem;
+        }
+
+        .item-list-container.horizon{
+            .item-list{
+                margin-bottom: 0;
+            }
+            .thumbnail-container{
+                flex:none;
+                width: 8rem;
+                height: 8rem;
+            }
+        }
+
+        >.divider{
+            display: $block;
+            border-bottom: .2rem dotted $lineGrey;
+            margin: 1.6rem 0;
+        }
+
+        .delivery-status-wrap,
+        .eval{
+            @extend %flexVCenter;
+            justify-content: space-between;
+            line-height: 1;
+            margin-bottom: 1.4rem;
+
+            .status{
+                margin: 0;
+                font-size: 1.4rem;
+            }
+            .util{
+                @extend %flexVCenter;
+                .date{
+                    font-size: 1.2rem;
+                    color: $fontGrey;
+                }
+                .divider{
+                    display: $inlineBlock;
+                    width: 1px;
+                    height: 1rem;
+                    background-color: $bgDark;
+                    margin: 0 1rem;
+                }
+                .delete-inquiry{
+                    font-size: 1.4rem;
+                }
+            }
+        }
+        .user-writing{
+            color: $fontBlackDark;
+            .title{
+                display: block;
+                font-size: 1.4rem;
+                font-weight: 500;
+                line-height: 1.2;
+                strong{
+                    margin-right: .4rem;
+                    color: $fontMedium;
+                }
+
+                .category {
+                    display: inline-block;
+                    color: $fontLight;
+                    margin-right: .6rem;
+                }
+
+                .question{
+                    &::before{
+                        content:'Q.';
+                        position: relative;
+                        display: inline-block;
+                        margin-right: .2rem;
+                        font:inherit;
+
+                    }
+                }
+            }
+            .content{
+                line-height: 1.5;
+                margin-top: .6rem;
+                font-size: 1.2rem;
+                letter-spacing: -0.04rem;
+            }
+        }
+        .admin-answer{
+            margin-top: 1rem;
+            background-color: $bgLight;
+            padding: 2rem;
+            @include round(1rem);
+
+
+            .content{
+                color: $fontDark;
+                font-size: 1.2rem;
+                line-height: 1.6;
+            }
+            >.date{
+                font-size: 1.2rem;
+                line-height: 1.3;
+                margin-top: 1rem;
+                color: $fontDark;
+            }
+        }
+
+    }
+}
+
+@include mobile{
+    .review-content{
+
+        >li{
+            >.divider{
+                margin: 1.4rem 0 ;
+            }
+        }
+        .item-list-container.horizon{
+            padding: 0;
+        }
+        .info-container{
+            .title-main{
+                font-size: 1.4rem;
+            }
+        }
+    }
+
+    .mypage{
+        &-review,
+        &-inquiry{
+
+            >.select-wrap{
+                .btn{
+                    max-width:9rem;
+                }
+            }
+        }
+    }
+}

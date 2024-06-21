@@ -1,0 +1,120 @@
+/* variables */
+$full: 100%;
+$half: 50%;
+$width: 1194px;
+$mobile: 767px;
+$tablet: 1023px;
+$desktop: 1024px;
+$offset: absolute;
+$fixed: fixed;
+$rel: relative;
+$block: block;
+$hidden: hidden;
+$flex: flex;
+$inlineFlex: inline-flex;
+$inlineBlock: inline-block;
+
+/* font */
+//$notoSans: 'Noto Sans Korean';
+$notoSans: 'Noto Sans KR';
+$pretendard: 'Pretendard';
+$numberFont: 'Montserrat';
+//$pointFont: 'binggrae';
+$pointFont: 'Noto Sans KR';
+
+
+/* 
+#####
+Color
+#####
+*/
+
+/* ## 고정색상 ## */
+$colorBlack: #000;
+$colorWhite: #fff;
+
+
+/* ## 태그 ## */
+$tagNew: #802bc5;
+$tagMd: #8559ee;
+$tagCoupon: #7f6dfc;
+$tagDelivery: #5d1b92;
+$tagBest: #ff5454;
+$tagOnly: #d5ffd0;
+$tagSale: #b2f8f5;
+$tagTime: #6a57ec;
+$tagEvent: #a461cb;
+
+/* ## 폰트 ## */
+$fontBlackDark: #1f1f1f;
+$fontBlackShade: #333;
+$fontDark: #7c7e80;
+$fontGreyDark: #575a5c;
+$fontGrey: #9f9f9f;
+$fontMedium: #b1b2b3;
+$fontLight: #cfcfcf;
+$fontGreyLight: #d9d9d9;
+
+
+/* ## 브랜드 컬러 ## */
+$brandPrimary: #8559ee;
+$brandSecondary: #7f6dfc;
+$brandVeryDark: #3f3967;
+$brandDark: #5d1b92;
+$brandMedium: #802bc5;
+$brandShade: #bda2c7;
+$brandLight: #c7bfff;
+
+/* ## 배경색 ## */
+$bgPrimaryLight: #ffebfa;
+$bgSecondaryLight: #f5f8fb;
+
+
+$bgBlack: #1f1f1f;
+$bgVeryDark: #9f9f9f;
+$bgDarkMedium: #707070;
+$bgDark: #575a5c;
+$bgDackGrey: #bebebe;
+$bgGrey: #d9d9d9;
+$bgGreyLight: #e8e8e8;
+$bgLight: #fafafa;
+
+/* ## 경고 ## */
+$pointDanger: #ff5454;
+$pointRequired: #ff7280;
+
+/* ## 보조 ## */
+$pointBlue: #3f8ede;
+$pointGreen: #28b279;
+
+/* ## 라인 ## */
+$lineBlackDark: #1f1f1f;
+$lineShade: #333;
+$lineDark: #575a5c;
+$lineDarkGrey: #707070;
+$lineGreyLight: #9f9f9f;
+$lineGrey: #d9d9d9;
+$lineMedium: #b1b2b2;
+$lineLightGrey: #cfcfcf; 
+$lineLight: #e8e8e8; 
+$lineBright: #f5f5f5;
+
+/* ## 버튼 ## */
+$btnFontColor: #1f1f1f;
+
+/* ## 체크박스 ## */
+$checkboxColor: #ddd;
+
+/* ## 스크롤바 ## */
+$scrollbarThumb: #ababab;
+$transparent: transparent;
+
+/* ## 타임세일 ## */
+$timeSaleBasic: #28ac6a;
+$timeSaleLight: #08cc6a;
+
+/* ## 쿠폰 컬러 ## */
+$couponProduct: #7f6dfc;
+$couponOrder: #ff5454;
+$couponCategory: #3f8ede;
+$couponDelivery: #28b279;

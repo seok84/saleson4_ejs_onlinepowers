@@ -1,0 +1,186 @@
+<div class="item-list-page item-index-page">
+    <div class="category-tab-all">
+        <!-- deps1에 클래스 on으로 토글 -->
+        <div class="deps1">홈</div>
+        <div class="deps1">1차 카테고리<i></i>
+            <div class="select-wrap">
+                <ul class="select-option">
+                    <li>1차 카테고리</li>
+                    <li>1차 카테고리</li>
+                    <li>1차 카테고리</li>
+                </ul>
+            </div>
+        </div>
+        <div class="deps1">2차 카테고리<i></i>
+            <div class="select-wrap">
+                <ul class="select-option">
+                    <li>2차 카테고리</li>
+                    <li>2차 카테고리</li>
+                    <li>2차 카테고리</li>
+                </ul>
+            </div>
+        </div>
+        <div class="deps1">3차 카테고리<i></i>
+            <div class="select-wrap">
+                <ul class="select-option">
+                    <li>3차 카테고리</li>
+                    <li>3차 카테고리</li>
+                    <li>3차 카테고리</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- category-tabs-current에 클래스 on으로 토글 -->
+    <div class="category-tabs-current">
+        <h2>1차 카테고리<i></i></h2>
+        <div class="select-wrap hidden">
+            <div class="triangle"></div>
+            <ul class="select-option">
+                <li>1차 카테고리</li>
+                <li>1차 카테고리</li>
+                <li>1차 카테고리</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- pc용 카테고리 -->
+    <div class="swiper category-tabs-next-swiper swiper-visible pc">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide on"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리1</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리2</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리3</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리4</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리5</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리6</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리7</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+            <div class="swiper-slide"><a href="javascript:;">2차 카테고리</a></div>
+        </div>
+
+        <div class="swiper-controls">
+            <div class="swiper-prev">이전</div>
+            <div class="swiper-next">다음</div>
+        </div>
+
+    </div>
+
+    <!-- mobile용 카테고리 -->
+    <ul class="category-tabs-next mobile">
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+        <li>2차 카테고리</li>
+    </ul>
+    <div class="btn-more-category mobile" onclick="salesOnUI.toggleActive('.category-tabs-next.mobile');"><i></i></div>
+
+
+    <div class="filter-wrap">
+        <p>총 <b>123</b>개 상품</p>
+        <div class="select-wrap">
+            <select class="input-select">
+                <option value="">인기순</option>
+                <option value="">추천순</option>
+                <option value="">최신순</option>
+                <option value="">높은가격순</option>
+                <option value="">낮은가격순</option>
+                <option value="">옵션</option>
+            </select>
+        </div>
+    </div>
+    <!-- 아이템리스트 -->
+    <div class="item-list-container vertical">
+        <div class="item-list item-list-4">
+            <!-- 아이템 썸네일 영역 -->
+            <div class="thumbnail-container sold-out">
+                <div class="sold-out-wrap">
+                    <span>
+                        <img src="/static/content/image/sample/sold-out.png" alt="품절">
+                    </span>
+                </div>
+                <div class="thumbnail-wrap">
+                    <div class="thumbnail-area">
+                        <img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+                        <img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+                        <img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+                        <img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+                        <img class="center-center">
+                    </div>
+                    <img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일">
+                </div>
+                <div class="user-action">
+                    <div class="user-ico user-attention">관심상품</div>
+                    <div class="user-ico user-basket">장바구니</div>
+                </div>
+            </div>
+            <!-- 아이템 정보 영역 -->
+            <div class="info-container">
+                <div class="title-main paragraph-ellipsis">
+                    [브랜드명] 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2
+                </div>
+                <div class="title-sub paragraph-ellipsis">
+                    서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브
+                    타이틀
+                    서브
+                    타이틀
+                </div>
+                <div class="discounted">
+                    138,000원
+                </div>
+                <div class="price-wrap">
+                    <p class="price">
+                        <span>108,000</span>
+                        <span>원</span>
+                    </p>
+                    <p class="sale">
+                        27%
+                    </p>
+                </div>
+                <div class="tag-wrap">
+                    <div class="tag new">신상품</div>
+                    <div class="tag md">MD추천</div>
+                    <div class="tag coupon">쿠폰</div>
+                    <div class="tag delivery">무료배송</div>
+                    <div class="tag best">베스트</div>
+                    <div class="tag timesale">타임세일</div>
+                    <div class="tag event">이벤트</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 페이징 -->
+    <div class="pagination">
+        <a href="javascript:;" class="page-item"><span class="page-prev">이전페이지</span></a>
+        <a href="javascript:;" class="page-item active"><span class="page-link">1</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-link">2</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-link">3</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-link">4</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-link">5</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-next">이전페이지</span></a>
+    </div>
+</div>
+
+<script>
+$(document).ready(function(){
+	salesOnUI.categorySwiper();
+    salesOnUI.selectBox('.category-tabs-current h2', '.category-tabs-current');
+    salesOnUI.selectBox('.category-tab-all .deps1');
+    
+});
+</script>

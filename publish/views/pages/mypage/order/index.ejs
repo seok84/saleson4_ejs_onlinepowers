@@ -1,0 +1,1268 @@
+<section class="mypage-order">
+	<div class="title-container">
+		<h2 class="title-h2">주문/배송 조회</h2>
+	</div>
+	<ul class="dot-list pc">
+		<li>제품 구매 후, 14일이 지나면 자동으로 '구매확정'이 됩니다.</li>
+		<li>[주문상세]를 클릭하시면 주문 상세 내역 및 상품별 배송현황을 조회하실 수 있습니다.</li>
+	</ul>
+	<div class="period-container">
+		<label class="date"><input type="date" class="form-basic" /><i></i></label>
+		<span class="divider">~</span>
+		<label class="date"><input type="date" class="form-basic" /><i></i></label>
+		<div class="select-wrap box">
+			<select class="input-select">
+				<option value="">조회기간</option>
+				<option value="">옵션</option>
+			</select>
+		</div>
+		<div class="form-line box">
+			<div class="flex">
+				<input type="text" class="form-basic" placeholder="검색어를 입력하세요" />
+				<button class="btn btn-black">조회</button>
+			</div>
+		</div>
+	</div>
+	<!-- // 주문 내역 -->
+	<div class="order-item-wrapper">
+		<!-- 단일 아이템 -->
+		<div class="order-item">
+			<div class="info">
+				<span class="date">2023. 12. 17 12:00:00</span>
+				<a href="/mypage/order/_id" class="detail">
+					<span>K12345678901349</span>
+					<span class="detail-linked">주문상세</span>
+					<i class="arrow"></i>
+				</a>
+			</div>
+			<div class="order-status">
+				<div class="wrapper">
+					<p class="delivery-status-wrap"><span class="status deposit-waiting">입금대기중</span></p>
+					<div class="item-wrap">
+						<div class="item-list-container horizon">
+							<div class="item-list">
+								<!-- 아이템 썸네일 영역 -->
+								<div class="thumbnail-container sold-out">
+									<div class="sold-out-wrap">
+										<span>
+											<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+										</span>
+									</div>
+									<div class="thumbnail-wrap">
+										<div class="thumbnail-area">
+											<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="center-center" />
+										</div>
+										<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+									</div>
+								</div>
+								<!-- 아이템 정보 영역 -->
+								<div class="info-container">
+									<div class="title-main paragraph-ellipsis">
+										<b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이
+										노출되는 영역 50g X 2
+									</div>
+									<div class="title-sub paragraph-ellipsis">
+										<b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브
+										타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+									</div>
+									<div class="underline red" onclick="salesOnUI.modal('.modal.item-grid')">구성 상품 보기</div>
+									<div class="purchase-amount">
+										<p class="price">9,999,999원</p>
+										<p class="amount">수량 999개</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 마이페이지 주문배송조회 버튼 -->
+						<div class="btn-wrap">
+							<div class="box">
+								<button class="btn btn-default btn-middle btn-cancel" onclick="salesOnUI.modal('.open-modal-cancel')">주문취소</button>
+							</div>
+						</div>
+						<div class="btn-wrap" style="display: none">
+							<div class="box">
+								<button type="button" class="btn btn-primary btn-middle btn-review" onclick="salesOnUI.modal('.open-modal-review')">
+									후기작성
+								</button>
+								<button type="button" class="btn btn-primary btn-middle" onclick="salesOnUI.modal('.open-modal-confirm')">구매확정</button>
+								<button type="button" class="btn btn-primary-line btn-middle">배송조회</button>
+							</div>
+							<div class="box">
+								<button type="button" class="btn btn-default btn-middle" onclick="salesOnUI.modal('.open-modal-exchange')">교환신청</button>
+								<button type="button" class="btn btn-default btn-middle" onclick="salesOnUI.modal('.open-modal-return')">반품신청</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 단일 아이템 -->
+		<div class="order-item">
+			<div class="info">
+				<span class="date">2023. 12. 17 12:00:00</span>
+				<a href="" class="detail">
+					<span>K12345678901349</span>
+					<span class="detail-linked">주문상세</span>
+					<i class="arrow"></i>
+				</a>
+			</div>
+			<div class="order-status">
+				<div class="wrapper">
+					<p class="delivery-status-wrap"><span class="status purchase-confirm">구매확정</span></p>
+					<div class="item-wrap">
+						<div class="item-list-container horizon">
+							<div class="item-list">
+								<!-- 아이템 썸네일 영역 -->
+								<div class="thumbnail-container sold-out">
+									<div class="sold-out-wrap">
+										<span>
+											<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+										</span>
+									</div>
+									<div class="thumbnail-wrap">
+										<div class="thumbnail-area">
+											<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="center-center" />
+										</div>
+										<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+									</div>
+								</div>
+								<!-- 아이템 정보 영역 -->
+								<div class="info-container">
+									<div class="title-main paragraph-ellipsis">
+										<b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이
+										노출되는 영역 50g X 2
+									</div>
+									<div class="title-sub paragraph-ellipsis">
+										<b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브
+										타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+									</div>
+									<div class="underline red" onclick="salesOnUI.modal('.modal.item-grid')">구성 상품 보기</div>
+									<div class="purchase-amount">
+										<p class="price">9,999,999원</p>
+										<p class="amount">수량 999개</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 마이페이지 주문배송조회 버튼 -->
+						<div class="btn-wrap" style="display: none">
+							<div class="box">
+								<button class="btn btn-default btn-middle btn-cancel" onclick="salesOnUI.modal('.open-modal-cancel')">주문취소</button>
+							</div>
+						</div>
+						<div class="btn-wrap">
+							<div class="box">
+								<button type="button" class="btn btn-primary btn-middle btn-review" onclick="salesOnUI.modal('.open-modal-review')">
+									후기작성
+								</button>
+								<button type="button" class="btn btn-primary btn-middle" style="display: none" onclick="salesOnUI.modal('.open-modal-confirm')">
+									구매확정
+								</button>
+								<button type="button" class="btn btn-primary-line btn-middle" style="display: none">배송조회</button>
+							</div>
+							<div class="box" style="display: none">
+								<button type="button" class="btn btn-default btn-middle" onclick="salesOnUI.modal('.open-modal-exchange')">교환신청</button>
+								<button type="button" class="btn btn-default btn-middle" onclick="salesOnUI.modal('.open-modal-return')">반품신청</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 복수 아이템 -->
+		<div class="order-item">
+			<div class="info">
+				<span class="date">2023. 12. 17 12:00:00</span>
+				<a href="" class="detail">
+					<span>K12345678901349</span>
+					<span class="detail-linked">주문상세</span>
+					<i class="arrow"></i>
+				</a>
+			</div>
+			<div class="order-status">
+				<div class="wrapper">
+					<p class="delivery-status-wrap"><span class="status deposit-waiting">구매확정</span></p>
+					<div class="item-wrap">
+						<div class="item-list-container horizon">
+							<div class="item-list">
+								<!-- 아이템 썸네일 영역 -->
+								<div class="thumbnail-container sold-out">
+									<div class="sold-out-wrap">
+										<span>
+											<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+										</span>
+									</div>
+									<div class="thumbnail-wrap">
+										<div class="thumbnail-area">
+											<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="center-center" />
+										</div>
+										<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+									</div>
+								</div>
+								<!-- 아이템 정보 영역 -->
+								<div class="info-container">
+									<div class="title-main paragraph-ellipsis">
+										<b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이
+										노출되는 영역 50g X 2
+									</div>
+									<div class="title-sub paragraph-ellipsis">
+										<b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브
+										타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+									</div>
+									<div class="underline red" onclick="salesOnUI.modal('.modal.item-grid')">구성 상품 보기</div>
+									<div class="purchase-amount">
+										<p class="price">9,999,999원</p>
+										<p class="amount">수량 999개</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 마이페이지 주문배송조회 버튼 -->
+						<div class="btn-wrap" style="display: none">
+							<div class="box">
+								<button class="btn btn-default btn-middle btn-cancel" onclick="salesOnUI.modal('.open-modal-cancel')">주문취소</button>
+							</div>
+						</div>
+						<div class="btn-wrap">
+							<div class="box">
+								<button type="button" class="btn btn-primary btn-middle btn-review" onclick="salesOnUI.modal('.open-modal-review')">
+									후기작성
+								</button>
+								<button type="button" class="btn btn-primary btn-middle" style="display: none" onclick="salesOnUI.modal('.open-modal-confirm')">
+									구매확정
+								</button>
+								<button type="button" class="btn btn-primary-line btn-middle">배송조회</button>
+							</div>
+							<div class="box">
+								<button type="button" class="btn btn-default btn-middle" onclick="salesOnUI.modal('.open-modal-exchange')">교환신청</button>
+								<button type="button" class="btn btn-default btn-middle" onclick="salesOnUI.modal('.open-modal-return')">반품신청</button>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="wrapper">
+					<p class="delivery-status-wrap"><span class="status deposit-waiting">배송완료</span></p>
+					<div class="item-wrap">
+						<div class="item-list-container horizon">
+							<div class="item-list">
+								<!-- 아이템 썸네일 영역 -->
+								<div class="thumbnail-container sold-out">
+									<div class="sold-out-wrap">
+										<span>
+											<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+										</span>
+									</div>
+									<div class="thumbnail-wrap">
+										<div class="thumbnail-area">
+											<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+											<img class="center-center" />
+										</div>
+										<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+									</div>
+								</div>
+								<!-- 아이템 정보 영역 -->
+								<div class="info-container">
+									<div class="title-main paragraph-ellipsis">
+										<b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이
+										노출되는 영역 50g X 2
+									</div>
+									<div class="title-sub paragraph-ellipsis">
+										<b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브
+										타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+									</div>
+									<div class="underline red" onclick="salesOnUI.modal('.modal.item-grid')">구성 상품 보기</div>
+									<div class="purchase-amount">
+										<p class="price">9,999,999원</p>
+										<p class="amount">수량 999개</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<!-- 마이페이지 주문배송조회 버튼 -->
+						<div class="btn-wrap" style="display: none">
+							<div class="box">
+								<button class="btn btn-default btn-middle btn-cancel" onclick="salesOnUI.modal('.open-modal-cancel')">주문취소</button>
+							</div>
+						</div>
+						<div class="btn-wrap">
+							<div class="box">
+								<button
+									type="button"
+									class="btn btn-primary btn-middle btn-review"
+									onclick="salesOnUI.modal('.modal-review')"
+									style="display: none">
+									후기작성
+								</button>
+								<button type="button" class="btn btn-primary btn-middle" onclick="salesOnUI.modal('.open-modal-confirm')">구매확정</button>
+								<button type="button" class="btn btn-primary-line btn-middle">배송조회</button>
+							</div>
+							<div class="box">
+								<button type="button" class="btn btn-default btn-middle" onclick="salesOnUI.modal('.open-modal-exchange')">교환신청</button>
+								<button type="button" class="btn btn-default btn-middle" onclick="salesOnUI.modal('.open-modal-return')">반품신청</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- <ul class="dot-list mobile">
+		<li>제품 구매 후, 14일이 지나면 자동으로 '구매확정'이 됩니다.</li>
+		<li>[주문상세]를 클릭하시면 주문 상세 내역 및 상품별 배송현황을 조회하실 수 있습니다.</li>
+	</ul> -->
+	<!-- // 페이징 -->
+	<div class="pagination">
+		<a href="javascript:;" class="page-item"><span class="page-prev">이전페이지</span></a>
+		<a href="javascript:;" class="page-item active"><span class="page-link">1</span></a>
+		<a href="javascript:;" class="page-item"><span class="page-link">2</span></a>
+		<a href="javascript:;" class="page-item"><span class="page-link">3</span></a>
+		<a href="javascript:;" class="page-item"><span class="page-link">4</span></a>
+		<a href="javascript:;" class="page-item"><span class="page-link">5</span></a>
+		<a href="javascript:;" class="page-item"><span class="page-next">이전페이지</span></a>
+	</div>
+	<!--
+        //
+        // 모달
+        //
+        -->
+	<!-- 후기작성 모달 -->
+	<!-- <div class="modal modal-review">
+        <div class="dimmed-bg" data-dismiss></div>
+        <div class="modal-wrap">
+        	<button class="modal-close" data-dismiss>닫기</button>
+        	<div class="modal-header">후기작성</div>
+        	<div class="modal-body"></div>
+        </div>
+        </div> -->
+	<!-- 구성상품보기 모달 -->
+	<div class="modal item-grid">
+		<div class="dimmed-bg" data-dismiss></div>
+		<div class="modal-wrap">
+			<button class="modal-close" data-dismiss>닫기</button>
+			<div class="modal-header">구성상품보기</div>
+			<div class="modal-body">
+				<div class="item-list-container vertical">
+					<div class="item-list item-list-4">
+						<!-- 아이템 썸네일 영역 -->
+						<div class="thumbnail-container sold-out">
+							<div class="sold-out-wrap">
+								<span>
+									<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+								</span>
+							</div>
+							<div class="thumbnail-wrap">
+								<div class="thumbnail-area">
+									<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="center-center" />
+								</div>
+								<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+							</div>
+							<div class="user-action">
+								<div class="user-ico user-attention">관심상품</div>
+								<div class="user-ico user-basket">장바구니</div>
+							</div>
+						</div>
+						<!-- 아이템 정보 영역 -->
+						<div class="info-container">
+							<div class="title-main paragraph-ellipsis">
+								[브랜드명] 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역
+								50g X 2
+							</div>
+							<div class="title-sub paragraph-ellipsis">
+								서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브
+								타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+							</div>
+							<div class="discounted">138,000원</div>
+							<div class="price-wrap">
+								<p class="price">
+									<span>108,000</span>
+									<span>원</span>
+								</p>
+								<p class="sale">27%</p>
+							</div>
+							<div class="tag-wrap">
+								<div class="tag new">신상품</div>
+								<div class="tag md">MD추천</div>
+								<div class="tag coupon">쿠폰</div>
+								<div class="tag delivery">무료배송</div>
+								<div class="tag best">베스트</div>
+								<div class="tag timesale">타임세일</div>
+								<div class="tag event">이벤트</div>
+							</div>
+						</div>
+					</div>
+					<div class="item-list item-list-4">
+						<!-- 아이템 썸네일 영역 -->
+						<div class="thumbnail-container sold-out">
+							<div class="sold-out-wrap">
+								<span>
+									<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+								</span>
+							</div>
+							<div class="thumbnail-wrap">
+								<div class="thumbnail-area">
+									<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="center-center" />
+								</div>
+								<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+							</div>
+							<div class="user-action">
+								<div class="user-ico user-attention">관심상품</div>
+								<div class="user-ico user-basket">장바구니</div>
+							</div>
+						</div>
+						<!-- 아이템 정보 영역 -->
+						<div class="info-container">
+							<div class="title-main paragraph-ellipsis">
+								[브랜드명] 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역
+								50g X 2
+							</div>
+							<div class="title-sub paragraph-ellipsis">
+								서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브
+								타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+							</div>
+							<div class="discounted">138,000원</div>
+							<div class="price-wrap">
+								<p class="price">
+									<span>108,000</span>
+									<span>원</span>
+								</p>
+								<p class="sale">27%</p>
+							</div>
+							<div class="tag-wrap">
+								<div class="tag new">신상품</div>
+								<div class="tag md">MD추천</div>
+								<div class="tag coupon">쿠폰</div>
+								<div class="tag delivery">무료배송</div>
+								<div class="tag best">베스트</div>
+								<div class="tag timesale">타임세일</div>
+								<div class="tag event">이벤트</div>
+							</div>
+						</div>
+					</div>
+					<div class="item-list item-list-4">
+						<!-- 아이템 썸네일 영역 -->
+						<div class="thumbnail-container sold-out">
+							<div class="sold-out-wrap">
+								<span>
+									<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+								</span>
+							</div>
+							<div class="thumbnail-wrap">
+								<div class="thumbnail-area">
+									<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="center-center" />
+								</div>
+								<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+							</div>
+							<div class="user-action">
+								<div class="user-ico user-attention">관심상품</div>
+								<div class="user-ico user-basket">장바구니</div>
+							</div>
+						</div>
+						<!-- 아이템 정보 영역 -->
+						<div class="info-container">
+							<div class="title-main paragraph-ellipsis">
+								[브랜드명] 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역
+								50g X 2
+							</div>
+							<div class="title-sub paragraph-ellipsis">
+								서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브
+								타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+							</div>
+							<div class="discounted">138,000원</div>
+							<div class="price-wrap">
+								<p class="price">
+									<span>108,000</span>
+									<span>원</span>
+								</p>
+								<p class="sale">27%</p>
+							</div>
+							<div class="tag-wrap">
+								<div class="tag new">신상품</div>
+								<div class="tag md">MD추천</div>
+								<div class="tag coupon">쿠폰</div>
+								<div class="tag delivery">무료배송</div>
+								<div class="tag best">베스트</div>
+								<div class="tag timesale">타임세일</div>
+								<div class="tag event">이벤트</div>
+							</div>
+						</div>
+					</div>
+					<div class="item-list item-list-4">
+						<!-- 아이템 썸네일 영역 -->
+						<div class="thumbnail-container sold-out">
+							<div class="sold-out-wrap">
+								<span>
+									<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+								</span>
+							</div>
+							<div class="thumbnail-wrap">
+								<div class="thumbnail-area">
+									<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="center-center" />
+								</div>
+								<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+							</div>
+							<div class="user-action">
+								<div class="user-ico user-attention">관심상품</div>
+								<div class="user-ico user-basket">장바구니</div>
+							</div>
+						</div>
+						<!-- 아이템 정보 영역 -->
+						<div class="info-container">
+							<div class="title-main paragraph-ellipsis">
+								[브랜드명] 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역
+								50g X 2
+							</div>
+							<div class="title-sub paragraph-ellipsis">
+								서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브
+								타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+							</div>
+							<div class="discounted">138,000원</div>
+							<div class="price-wrap">
+								<p class="price">
+									<span>108,000</span>
+									<span>원</span>
+								</p>
+								<p class="sale">27%</p>
+							</div>
+							<div class="tag-wrap">
+								<div class="tag new">신상품</div>
+								<div class="tag md">MD추천</div>
+								<div class="tag coupon">쿠폰</div>
+								<div class="tag delivery">무료배송</div>
+								<div class="tag best">베스트</div>
+								<div class="tag timesale">타임세일</div>
+								<div class="tag event">이벤트</div>
+							</div>
+						</div>
+					</div>
+					<div class="item-list item-list-4">
+						<!-- 아이템 썸네일 영역 -->
+						<div class="thumbnail-container sold-out">
+							<div class="sold-out-wrap">
+								<span>
+									<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+								</span>
+							</div>
+							<div class="thumbnail-wrap">
+								<div class="thumbnail-area">
+									<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+									<img class="center-center" />
+								</div>
+								<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+							</div>
+							<div class="user-action">
+								<div class="user-ico user-attention">관심상품</div>
+								<div class="user-ico user-basket">장바구니</div>
+							</div>
+						</div>
+						<!-- 아이템 정보 영역 -->
+						<div class="info-container">
+							<div class="title-main paragraph-ellipsis">
+								[브랜드명] 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역
+								50g X 2
+							</div>
+							<div class="title-sub paragraph-ellipsis">
+								서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브
+								타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+							</div>
+							<div class="discounted">138,000원</div>
+							<div class="price-wrap">
+								<p class="price">
+									<span>108,000</span>
+									<span>원</span>
+								</p>
+								<p class="sale">27%</p>
+							</div>
+							<div class="tag-wrap">
+								<div class="tag new">신상품</div>
+								<div class="tag md">MD추천</div>
+								<div class="tag coupon">쿠폰</div>
+								<div class="tag delivery">무료배송</div>
+								<div class="tag best">베스트</div>
+								<div class="tag timesale">타임세일</div>
+								<div class="tag event">이벤트</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- // 페이징 -->
+				<ul class="pagination">
+					<li class="page-item"><span class="page-prev">이전페이지</span></li>
+					<li class="page-item active"><span class="page-link">1</span></li>
+					<li class="page-item"><span class="page-link">2</span></li>
+					<li class="page-item"><span class="page-link">3</span></li>
+					<li class="page-item"><span class="page-link">4</span></li>
+					<li class="page-item"><span class="page-link">5</span></li>
+					<li class="page-item"><span class="page-next">이전페이지</span></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<!-- 반품신청 모달 -->
+	<div class="modal modal-product open-modal-return">
+		<div class="dimmed-bg" data-dismiss></div>
+		<div class="modal-wrap">
+			<button class="modal-close" data-dismiss>닫기</button>
+			<div class="modal-header">반품신청</div>
+			<div class="modal-body p-2 type-return">
+				<form action="">
+					<!-- 아이템 영역 -->
+					<div class="item-list-container horizon">
+						<div class="item-list">
+							<!-- 아이템 썸네일 영역 -->
+							<div class="thumbnail-container sold-out">
+								<div class="sold-out-wrap">
+									<span>
+										<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+									</span>
+								</div>
+								<div to="/" @click.prevent class="thumbnail-wrap">
+									<div class="thumbnail-area">
+										<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="center-center" />
+									</div>
+									<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+								</div>
+							</div>
+							<!-- 아이템 정보 영역 -->
+							<div class="info-container">
+								<div class="title-main paragraph-ellipsis">
+									<b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이
+									노출되는 영역 50g X 2
+								</div>
+								<div class="title-sub paragraph-ellipsis">
+									<b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+									서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+								</div>
+								<div class="underline red">구성 상품 보기</div>
+								<div class="purchase-amount">
+									<p class="price">9,999,999원</p>
+									<p class="amount">수량 999개</p>
+								</div>
+								<div class="select-wrap select-amount">
+									<span>수량</span>
+									<select name="" id="" class="input-select small-arr">
+										<option value="">nnn</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="article-divider"></div>
+					<!-- 취소사유 -->
+					<h3 class="form-title">반품사유</h3>
+					<div class="select-wrap">
+						<select class="input-select">
+							<option value="">반품 사유를 선택하세요</option>
+							<option value="">셀렉트박스 옵션</option>
+						</select>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="반품 사유를 입력하세요" />
+						<span class="feedback invalid">유효성 메시지</span>
+					</div>
+					<label for="addPhoto" class="btn btn-default btn-add-photo">
+						<input type="file" name="addPhoto" id="addPhoto" class="hidden" />
+						<img src="/static/content/image/ico/ico_camera.svg" alt="사진 첨부하기" class="ico" /><span>사진 첨부하기</span>
+					</label>
+					<ul class="photo-list">
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content_720480.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content_7201440.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/thum.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+					</ul>
+					<ul class="dot-list large-dot">
+						<li>5MB 이하의 사진 4장까지 첨부 가능</li>
+					</ul>
+					<!-- 반송방법 -->
+					<h3 class="form-title">반송 송장 정보</h3>
+					<div class="radio-wrap">
+						<label class="input-radio"
+							><input type="radio" name="exchange-way" value="return" checked="checked" onchange="checkExchange()" /><i></i>회수요청
+						</label>
+						<label class="input-radio"><input type="radio" name="exchange-way" value="direct" onchange="checkExchange()" /><i></i>직접발송</label>
+					</div>
+					<div class="form-line package" style="display: none">
+						<div class="flex">
+							<div class="select-wrap">
+								<select name="" id="" class="input-select">
+									<option value="">택배사</option>
+									<option value="">택배사</option>
+								</select>
+							</div>
+							<input type="text" class="form-basic" placeholder="송장번호" />
+						</div>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="홍길동" readonly />
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="'-'없이 번호만 입력" />
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<div class="form-line">
+						<div class="flex">
+							<input type="text" class="form-basic" placeholder="우편번호 찾기" readonly />
+							<button class="btn btn-black">우편번호</button>
+						</div>
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="기본주소" readonly />
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="상세주소" />
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<!-- 환불정보 -->
+					<div class="return-content">
+						<h3 class="form-title">환불정보</h3>
+						<div class="form-line">
+							<input type="text" class="form-basic" placeholder="예금주명" />
+							<span class="feedback invalid" style="display: none">유효성 메시지</span>
+						</div>
+						<div class="form-line bank">
+							<div class="flex">
+								<div class="select-wrap">
+									<select class="input-select">
+										<option value="">은행명</option>
+										<option value="">셀렉트박스 옵션</option>
+									</select>
+								</div>
+								<input type="text" class="form-basic" placeholder="계좌번호" />
+							</div>
+						</div>
+						<ul class="dot-list large-dot">
+							<li>부분취소가 불가능한 결제방식(카드)의 경우 위에 입력하신 계좌로 취소금액을 입금해드립니다.</li>
+							<li>통장입금의 경우 택배가 판매자에게 도착한 후, 2~3일 이내에 반품 신청하신 계좌로 입금됩니다.</li>
+						</ul>
+					</div>
+					<div class="link-wrap">
+						<button type="submit" class="btn btn-primary link-item w-half">신청</button>
+						<button type="button" class="btn btn-default link-item w-half" @click="returnModalShow = !returnModalShow">취소</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 교환신청 모달 -->
+	<div class="modal modal-product open-modal-exchange">
+		<div class="dimmed-bg" data-dismiss></div>
+		<div class="modal-wrap">
+			<button class="modal-close" data-dismiss>닫기</button>
+			<div class="modal-header">교환신청</div>
+			<div class="modal-body p-2 type-exchange">
+				<form action="">
+					<!-- 아이템 영역 -->
+					<div class="item-list-container horizon">
+						<div class="item-list">
+							<!-- 아이템 썸네일 영역 -->
+							<div class="thumbnail-container sold-out">
+								<div class="sold-out-wrap">
+									<span>
+										<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+									</span>
+								</div>
+								<div to="/" @click.prevent class="thumbnail-wrap">
+									<div class="thumbnail-area">
+										<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="center-center" />
+									</div>
+									<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+								</div>
+							</div>
+							<!-- 아이템 정보 영역 -->
+							<div class="info-container">
+								<div class="title-main paragraph-ellipsis">
+									<b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이
+									노출되는 영역 50g X 2
+								</div>
+								<div class="title-sub paragraph-ellipsis">
+									<b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+									서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+								</div>
+								<div class="underline red">구성 상품 보기</div>
+								<div class="purchase-amount">
+									<p class="price">9,999,999원</p>
+									<p class="amount">수량 999개</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="article-divider"></div>
+					<!-- 취소사유 -->
+					<h3 class="form-title">교환사유</h3>
+					<div class="select-wrap">
+						<select class="input-select">
+							<option value="">제품이 손상되어 왔어요</option>
+							<option value="">셀렉트박스 옵션</option>
+						</select>
+					</div>
+					<label for="addPhoto" class="btn btn-default btn-add-photo">
+						<input type="file" name="addPhoto" id="addPhoto" class="hidden" />
+						<img src="/static/content/image/ico/ico_camera.svg" alt="사진 첨부하기" class="ico" /><span>사진 첨부하기</span>
+					</label>
+					<ul class="photo-list">
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content_720480.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content_7201440.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/thum.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+					</ul>
+					<ul class="dot-list large-dot">
+						<li>5MB 이하의 사진 4장까지 첨부 가능</li>
+					</ul>
+					<!-- 반송방법 -->
+					<h3 class="form-title">반송방법</h3>
+					<div class="radio-wrap">
+						<label class="input-radio"
+							><input type="radio" name="exchange-way" value="return" checked="checked" onchange="checkExchange()" /><i></i>회수요청
+						</label>
+						<label class="input-radio"><input type="radio" name="exchange-way" value="direct" onchange="checkExchange()" /><i></i>직접발송</label>
+					</div>
+					<div class="form-line package" style="display: none">
+						<div class="flex">
+							<div class="select-wrap">
+								<select name="" id="" class="input-select">
+									<option value="">택배사</option>
+									<option value="">택배사</option>
+								</select>
+							</div>
+							<input type="text" class="form-basic" placeholder="송장번호" />
+						</div>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="홍길동" readonly />
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="'-'없이 번호만 입력" />
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<div class="form-line">
+						<div class="flex">
+							<input type="text" class="form-basic" placeholder="우편번호 찾기" readonly />
+							<button class="btn btn-black">우편번호</button>
+						</div>
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="기본주소" readonly />
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="상세주소" />
+						<span class="feedback invalid" style="display: none">유효성 메시지</span>
+					</div>
+					<div class="link-wrap">
+						<button type="submit" class="btn btn-primary link-item w-half">신청</button>
+						<button type="button" class="btn btn-default link-item w-half" @click="exchangeModalShow = !exchangeModalShow">취소</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 취소신청 모달 -->
+	<div class="modal modal-product open-modal-cancel">
+		<div class="dimmed-bg" data-dismiss></div>
+		<div class="modal-wrap">
+			<button class="modal-close" data-dismiss>닫기</button>
+			<div class="modal-header">취소신청</div>
+			<div class="modal-body p-2 type-cancel">
+				<form action="">
+					<div class="check-wrap all-check">
+						<label class="input-checkbox"><input type="checkbox" /><i></i> 전체선택</label>
+					</div>
+					<!-- 아이템 영역 -->
+					<div class="item-list-container horizon">
+						<label class="checkbox"><input type="checkbox" /><i></i></label>
+						<div class="item-list">
+							<!-- 아이템 썸네일 영역 -->
+							<div class="thumbnail-container sold-out">
+								<div class="sold-out-wrap">
+									<span>
+										<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+									</span>
+								</div>
+								<div to="/" @click.prevent class="thumbnail-wrap">
+									<div class="thumbnail-area">
+										<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="center-center" />
+									</div>
+									<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+								</div>
+							</div>
+							<!-- 아이템 정보 영역 -->
+							<div class="info-container">
+								<div class="title-main paragraph-ellipsis">
+									<b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이
+									노출되는 영역 50g X 2
+								</div>
+								<div class="title-sub paragraph-ellipsis">
+									<b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+									서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+								</div>
+								<div class="underline red">구성 상품 보기</div>
+								<div class="purchase-amount">
+									<p class="price">9,999,999원</p>
+									<p class="amount">수량 999개</p>
+								</div>
+								<div class="select-wrap select-amount">
+									<span>수량</span>
+									<select name="" id="" class="input-select">
+										<option value="">nnn</option>
+									</select>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="article-divider"></div>
+					<!-- 취소사유 -->
+					<h3 class="form-title">취소사유</h3>
+					<div class="select-wrap">
+						<select class="input-select">
+							<option value="">취소 사유 직접입력</option>
+							<option value="">셀렉트박스 옵션</option>
+						</select>
+					</div>
+					<div class="form-line">
+						<input type="text" class="form-basic" placeholder="취소 사유를 입력하세요" />
+						<span class="feedback invalid">유효성 메시지</span>
+					</div>
+					<ul class="dot-list large-dot">
+						<li>주문 시 사용한 쿠폰과 적립금은 취소 시 복구됩니다. (단, 쿠폰의 경우 유효기간이 남은 쿠폰에 한함)</li>
+						<li>이미 상품이 발송된 것으로 확인되면 취소 요청이 자동으로 철회되며, 이 경우 상품을 받으신 후 반품신청을 하실 수 있습니다.</li>
+					</ul>
+					<!-- 환불정보 -->
+					<div class="return-content">
+						<h3 class="form-title">환불정보</h3>
+						<div class="form-line">
+							<input type="text" class="form-basic" placeholder="예금주명" />
+							<span class="feedback invalid" style="display: none">유효성 메시지</span>
+						</div>
+						<div class="form-line bank">
+							<div class="flex">
+								<div class="select-wrap">
+									<select class="input-select">
+										<option value="">은행명</option>
+										<option value="">셀렉트박스 옵션</option>
+									</select>
+								</div>
+								<input type="text" class="form-basic" placeholder="계좌번호" />
+							</div>
+						</div>
+						<ul class="dot-list large-dot">
+							<li>부분취소가 불가능한 결제방식(카드)의 경우 위에 입력하신 계좌로 취소금액을 입금해드립니다.</li>
+							<li>통장입금의 경우 택배가 판매자에게 도착한 후, 2~3일 이내에 반품 신청하신 계좌로 입금됩니다.</li>
+						</ul>
+					</div>
+					<div class="cancel-product">
+						<table>
+							<tbody>
+								<tr class="list">
+									<th>취소상품금액</th>
+									<td>9,999,999원</td>
+								</tr>
+								<tr class="list">
+									<th>취소배송비</th>
+									<td>5,000원</td>
+								</tr>
+								<tr class="list">
+									<th>추가배송비</th>
+									<td>5,000원</td>
+								</tr>
+								<tr class="total">
+									<th>총 환불금액</th>
+									<td>9,999,999원</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					<ul class="dot-list large-dot">
+						<li>
+							환불 금액에 대한 내용이 노출되고 있습니다. 환불 금액에 대한 내용이 노출되고 있습니다. 환불 금액에 대한 내용이 노출되고 있습니다.
+						</li>
+					</ul>
+					<div class="link-wrap">
+						<button type="submit" class="btn btn-primary link-item w-half">신청</button>
+						<button type="button" class="btn btn-default link-item w-half" @click="cancelModalShow = !cancelModalShow">취소</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 구매확정 모달 -->
+	<div class="modal modal-product modal-review open-modal-confirm">
+		<div class="dimmed-bg" data-dismiss></div>
+		<div class="modal-wrap">
+			<button class="modal-close" data-dismiss>닫기</button>
+			<div class="modal-header">구매확정</div>
+			<div class="modal-body p-2">
+				<p class="buy-confirm-txt">
+					<strong>구매확정해 주셔서 감사합니다.</strong>
+					<span>
+						지금 바로 고객님의 소중한 후기를 남겨주세요.<br />
+						작성해 주시는 이용후기는 다른 분의 쇼핑에 소중한 정보가 됩니다.
+					</span>
+				</p>
+				<form action="">
+					<!-- 아이템 영역 -->
+					<div class="item-list-container horizon">
+						<div class="item-list">
+							<!-- 아이템 썸네일 영역 -->
+							<div class="thumbnail-container sold-out">
+								<div class="sold-out-wrap">
+									<span>
+										<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+									</span>
+								</div>
+								<div to="/" @click.prevent class="thumbnail-wrap">
+									<div class="thumbnail-area">
+										<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="center-center" />
+									</div>
+									<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+								</div>
+							</div>
+							<!-- 아이템 정보 영역 -->
+							<div class="info-container">
+								<div class="title-main paragraph-ellipsis">
+									<b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이
+									노출되는 영역 50g X 2
+								</div>
+								<div class="title-sub paragraph-ellipsis">
+									<b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+									서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+								</div>
+								<div class="underline red">구성 상품 보기</div>
+								<div class="purchase-amount">
+									<p class="price">9,999,999원</p>
+									<p class="amount">수량 999개</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="check-wrap">
+						<label class="input-checkbox"><input type="checkbox" /><i></i> 상품옵션 미노출</label>
+					</div>
+					<span class="divider"></span>
+					<p class="eval-txt">상품은 어떠셨나요?</p>
+					<div class="score-wrap">
+						<span class="star active"></span>
+						<span class="star active"></span>
+						<span class="star active"></span>
+						<span class="star active"></span>
+						<span class="star"></span>
+					</div>
+					<textarea name="" id="" cols="30" rows="10" class="form-basic text-area" placeholder="내용을 입력하세요"></textarea>
+					<label for="addPhoto" class="btn btn-default btn-add-photo">
+						<input type="file" name="addPhoto" id="addPhoto" class="hidden" />
+						<img src="/static/content/image/ico/ico_camera.svg" alt="사진 첨부하기" class="ico" /><span>사진 첨부하기</span>
+						<span class="benefit-balloon">포토후기 +2,000P</span
+						><!-- v-show="!checkPhotoList" -->
+					</label>
+					<ul class="photo-list" v-show="checkPhotoList">
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content_720480.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content_7201440.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/thum.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+					</ul>
+					<ul class="dot-list large-dot">
+						<li>5MB 이하의 사진 4장까지 첨부 가능</li>
+						<li>이용후기는 구매확정 된 상품에 한하여 주문일로부터 90일내 작성 가능합니다.</li>
+						<li><em>일반후기 1,000P / 포토후기 2,000P</em> 적립해드립니다.</li>
+					</ul>
+					<div class="link-wrap">
+						<button type="submit" class="btn btn-primary link-item w-half">등록</button>
+						<button type="button" class="btn btn-default link-item w-half" @click="buyConfirmModalShow = !buyConfirmModalShow">취소</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	<!-- 후기작성 모달 -->
+	<div class="modal modal-product modal-review open-modal-review">
+		<div class="dimmed-bg" data-dismiss></div>
+		<div class="modal-wrap">
+			<button class="modal-close" data-dismiss>닫기</button>
+			<div class="modal-header">후기작성</div>
+			<div class="modal-body p-2">
+				<form action="">
+					<!-- 아이템 영역 -->
+					<div class="item-list-container horizon">
+						<div class="item-list">
+							<!-- 아이템 썸네일 영역 -->
+							<div class="thumbnail-container sold-out">
+								<div class="sold-out-wrap">
+									<span>
+										<img src="/static/content/image/sample/sold-out.png" alt="품절" />
+									</span>
+								</div>
+								<div to="/" @click.prevent class="thumbnail-wrap">
+									<div class="thumbnail-area">
+										<img class="top-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="top-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-left" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="bottom-right" src="/static/content/image/sample/thum_area.png" alt="플로팅이미지" />
+										<img class="center-center" />
+									</div>
+									<img class="thumbnail" src="/static/content/image/sample/thum.png" alt="썸네일" />
+								</div>
+							</div>
+							<!-- 아이템 정보 영역 -->
+							<div class="info-container">
+								<div class="title-main paragraph-ellipsis">
+									<b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이
+									노출되는 영역 50g X 2
+								</div>
+								<div class="title-sub paragraph-ellipsis">
+									<b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+									서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+								</div>
+								<div class="underline red">구성 상품 보기</div>
+								<div class="purchase-amount">
+									<p class="price">9,999,999원</p>
+									<p class="amount">수량 999개</p>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="check-wrap">
+						<label class="input-checkbox"><input type="checkbox" /><i></i> 상품옵션 미노출</label>
+					</div>
+					<span class="article-divider"></span>
+					<p class="eval-txt">상품은 어떠셨나요?</p>
+					<div class="score-wrap">
+						<span class="star active"></span>
+						<span class="star active"></span>
+						<span class="star active"></span>
+						<span class="star active"></span>
+						<span class="star"></span>
+					</div>
+					<textarea name="" id="" cols="30" rows="10" class="form-basic text-area" placeholder="내용을 입력하세요"></textarea>
+					<label for="addPhoto" class="btn btn-default btn-add-photo">
+						<input type="file" name="addPhoto" id="addPhoto" class="hidden" />
+						<img src="/static/content/image/ico/ico_camera.svg" alt="사진 첨부하기" class="ico" /><span>사진 첨부하기</span>
+						<span class="benefit-balloon">포토후기 +2,000P</span
+						><!-- v-show="!checkPhotoList" -->
+					</label>
+					<ul class="photo-list" v-show="checkPhotoList">
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content_720480.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/no_content_7201440.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+						<li class="photo-item">
+							<img src="/static/content/image/sample/thum.png" alt="fileName" class="thumbnail" />
+							<button type="button" class="btn-delete"></button>
+						</li>
+					</ul>
+					<ul class="dot-list large-dot">
+						<li>5MB 이하의 사진 4장까지 첨부 가능</li>
+						<li>이용후기는 구매확정 된 상품에 한하여 주문일로부터 90일내 작성 가능합니다.</li>
+						<li><em>일반후기 1,000P / 포토후기 2,000P</em> 적립해드립니다.</li>
+					</ul>
+					<div class="link-wrap">
+						<button type="submit" class="btn btn-primary link-item w-half">등록</button>
+						<button type="button" class="btn btn-default link-item w-half" @click="reviewModalShow = !reviewModalShow">취소</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<script>
+	function checkExchange() {
+		let displayValue = $('input[name="exchange-way"][value="direct"]').is(":checked") ? "block" : "none";
+		$(".form-line.package").css("display", displayValue);
+	}
+</script>

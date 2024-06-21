@@ -1,0 +1,71 @@
+@import 'mypage_main';
+
+.mypage-address {
+    .address-list {
+        border: .1rem solid $lineGrey;
+        @include round(.5rem);
+        padding: 2rem 3rem;
+        margin-bottom: 2rem;
+
+        &.active {
+            border-color: $colorBlack;
+        }
+    }
+
+    .no-contents {
+        .info {
+            margin: 0;
+        }
+    }
+}
+
+@include mobile {
+    .mypage-address {
+        
+        .title-container {
+            .btn {
+                margin: 0;
+
+                &-wrap {
+                    width: 100%;
+                }
+
+                &-action {
+                    width: 100%;
+                    height: 4.8rem;
+                }
+
+                &-set-default {
+                    display: none;
+                }
+            }
+        }
+
+        .address-list {
+            flex-wrap: wrap;
+            padding: 2rem 1.4rem;
+
+            .btn-wrap {
+                width: 100%;
+                margin-top: 2rem;
+                display: flex;
+                align-items: center;
+
+                .btn {
+                    flex: 1;
+                    display: $inlineBlock;
+                    max-width: 50%;
+                    height: 3.6rem;
+
+                    &+.btn {
+                        margin: 0 0 0 1rem;
+                    }
+                }
+            }
+        }
+
+        .btn-set-default {
+            font-size: 1.6rem;
+        }
+    }
+}

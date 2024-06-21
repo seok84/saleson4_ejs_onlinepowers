@@ -1,0 +1,81 @@
+<section class="customer customer-partner">
+	<div class="title-h1">고객센터</div>
+	<div class="customer-tab">
+		<a href="/customer/notice" class="link"><span>공지사항</span></a>
+		<!-- active 활성화 -->
+		<a href="/customer/faq" class="link en"><span>FAQ</span></a>
+		<a href="/customer/qna" class="link "><span>1:1문의</span></a>
+		<a href="/customer/partner" class="link active"><span>제휴/입점문의</span></a>
+	</div>
+	<div class="container">
+		<form action="">
+			<div class="form-line">
+				<input type="text" class="form-basic" placeholder="업체명" />
+				<span class="feedback invalid" style="display: none">유효성 메시지</span>
+			</div>
+			<div class="form-line">
+				<input type="text" class="form-basic" placeholder="담당자명" />
+				<span class="feedback invalid" style="display: none">유효성 메시지</span>
+			</div>
+			<div class="form-line">
+				<input type="number" class="form-basic" placeholder="담당자 연락처" />
+				<span class="feedback invalid" style="display: none">유효성 메시지</span>
+			</div>
+			<div class="form-line">
+				<input type="email" class="form-basic" placeholder="담당자 이메일" />
+				<span class="feedback invalid" style="display: none">유효성 메시지</span>
+			</div>
+			<div class="form-line">
+				<input type="text" class="form-basic" placeholder="홈페이지url" />
+				<span class="feedback invalid" style="display: none">유효성 메시지</span>
+			</div>
+			<div class="form-line">
+				<textarea name="" id="" cols="30" rows="10" class="form-basic text-area"
+					placeholder="판매하고자 하는 제품"></textarea>
+				<span class="feedback invalid" style="display: none">유효성 메시지</span>
+			</div>
+			<div class="upload-wrap">
+				<label for="upload-file" class="btn btn-default">
+					<input type="file" name="upload-file" id="upload-file" accept=".gif,.png,.jpg,.jpeg,.pdf"
+						multiple />
+					<span>파일선택</span>
+				</label>
+				<p class="file-placeholder">선택된 파일 없음</p>
+				<div class="upload-preview hide"></div>
+			</div>
+			<ul class="dot-list large-dot">
+				<li>제품리스트를 파일로 첨부하시면 빠른 견적 진행 가능합니다.</li>
+				<li>10MB 이내의 jpg, gif, png, pdf 파일만 업로드 가능합니다.</li>
+			</ul>
+			<ul class="terms-content">
+				<li class="check-wrap">
+					<label class="circle-input-checkbox"><input type="checkbox" /><i></i>
+						<p class="terms-title">개인정보의 수집·이용목적 및 항목 동의 <em>(필수)</em></p>
+					</label>
+					<div class="terms-list">
+						<button type="button" class="terms-button">약관보기</button>
+					</div>
+				</li>
+			</ul>
+			<div class="link-wrap gap">
+				<button type="button" class="btn btn-primary link-item w-half">저장</button>
+				<button type="button" class="btn btn-primary-line link-item w-half">취소</button>
+			</div>
+		</form>
+	</div>
+	<!-- 약관보기 모달 -->
+	<div class="modal modal-terms">
+		<div class="dimmed-bg" data-dismiss></div>
+		<div class="modal-wrap">
+			<button class="modal-close" data-dismiss>닫기</button>
+			<div class="modal-header">약관보기</div>
+			<div class="p-2 modal-body">
+				<div class="modal-content">약관내용</div>
+				<div class="btn-wrap gap">
+					<button type="button" class="btn btn-default">취소</button>
+					<button type="button" class="btn btn-primary">저장</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>

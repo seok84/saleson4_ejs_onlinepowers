@@ -1,0 +1,195 @@
+<link rel="stylesheet" href="/static/content/css/guide.css">
+<div class="guide-subtabs">
+    <a type="button" href="guide-layout" class="tab-item">layout</a>
+    <a type="button" href="guide-form" class="tab-item">form</a>
+    <a type="button" href="guide-button" class="tab-item">button</a>
+    <a type="button" href="guide-text" class="tab-item">text</a>
+    <a type="button" href="guide-item" class="tab-item">item</a>
+    <a type="button" href="guide-modal" class="tab-item active">modal</a>
+    <a type="button" href="guide-color" class="tab-item">color</a>
+</div>
+
+<div class="guide-components">
+    <div class="guide-content">
+        <h2>툴팁</h2>
+        <div class="guide-modal-area" style="height: 14rem;">
+            <div class="tooltip-wrap">
+                <button type="button" class="tooltip-close">닫기</button>
+                <div class="text-center">tooltip sample</div>
+            </div>
+        </div>
+        <code class="guide-code">
+            <pre>
+                // 부모요소에 position: relative가 있는지 확인 필요
+                &lt;div class="tooltip-wrap"&gt;
+                    &lt;button type="button" class="tooltip-close"&gt;닫기&lt;/button&gt;
+                    &lt;div class="text-center"&gt;tooltip sample&lt;/div&gt; //텍스트 가운데 정렬이 필요할 때에만 text-center 내부에 텍스트 작성
+                &lt;/div&gt;
+            </pre>
+        </code>
+        <br><br>
+    
+        <h2>모달 기본</h2>
+        <em style="color: red; display: block;">.modal 에 show 클래스가 붙어야 노출</em>
+        <br>
+        <div class="guide-modal-area" style="height: 24rem;">
+            <div class="modal">
+                <div class="modal-wrap">
+                    <button class="modal-close">닫기</button>
+                    <div class="modal-header">
+                        타이틀
+                    </div>
+                    <div class="modal-body">
+                        컨텐츠 내용
+                    </div>
+                </div>
+                <div class="dimmed-bg"></div>
+            </div>
+        </div>
+        <code class="guide-code">
+                                            <pre>
+                &lt;div class="modal"&gt;
+                    &lt;div class="modal-wrap"&gt;
+                        &lt;button class="modal-close"&gt;닫기&lt;/button&gt;
+                        &lt;div class="modal-header"&gt;
+                            모달 헤더
+                        &lt;/div&gt;
+                        &lt;div class="modal-body"&gt;
+                            &lt;slot /&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="dimmed-bg"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+            </pre>
+        </code>
+        <br>
+        <br>
+        <h2>alert 모달</h2>
+        <div class="guide-modal-area" style="height: 24rem;">
+            <div class="modal alert-modal">
+                <div class="modal-wrap">
+                    <button class="modal-close">닫기</button>
+                    <div class="modal-header">
+                        타이틀
+                    </div>
+                    <div class="modal-body p-2">
+                        <div class="modal-content">
+                            컨텐츠 내부
+                        </div>
+                        <div class="btn-wrap gap">
+                            <button type="button" class="btn btn-default">취소</button>
+                            <button type="button" class="btn btn-primary">저장</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dimmed-bg"></div>
+            </div>
+        </div>
+        <div class="guide-modal-area" style="height: 24rem;">
+            <div class="modal alert-modal no-head">
+                <div class="modal-wrap">
+                    <button class="modal-close">닫기</button>
+                    <div class="modal-body p-2">
+                        <div class="modal-content">
+                            컨텐츠 내부
+                        </div>
+                        <div class="btn-wrap gap">
+                            <button type="button" class="btn btn-default">취소</button>
+                            <button type="button" class="btn btn-primary">저장</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="dimmed-bg"></div>
+            </div>
+        </div>
+        <div class="guide-modal-area" style="height: 24rem;">
+            <div class="modal alert-modal no-head">
+                <div class="modal-wrap">
+                    <button class="modal-close">닫기</button>
+                    <div class="modal-body p-2">
+                        <div class="modal-content">
+                            컨텐츠 내부
+                        </div>
+                    </div>
+                </div>
+                <div class="dimmed-bg"></div>
+            </div>
+        </div>
+        <code class="guide-code">
+            <pre>
+                &lt;div class="modal alert-modal"&gt;
+                    &lt;div class="modal-wrap"&gt;
+                        &lt;button class="modal-close"&gt;닫기&lt;/button&gt;
+                        &lt;div class="modal-header"&gt;
+                            타이틀
+                        &lt;/div&gt;
+                        &lt;div class="modal-body p-2"&gt;
+                            &lt;div class="modal-content"&gt;
+                                컨텐츠 내부
+                            &lt;/div&gt;
+                            &lt;div class="btn-wrap gap"&gt;
+                                &lt;button type="button" class="btn btn-default"&gt;취소&lt;/button&gt;
+                                &lt;button type="button" class="btn btn-primary"&gt;저장&lt;/button&gt;
+                            &lt;/div&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                    &lt;div class="dimmed-bg"&gt;&lt;/div&gt;
+                &lt;/div&gt;
+
+                &lt;div class="modal alert-modal no-head"&gt;
+                &lt;div class="modal-wrap"&gt;
+                    &lt;button class="modal-close"&gt;닫기&lt;/button&gt;
+                    &lt;div class="modal-body p-2"&gt;
+                        &lt;div class="modal-content"&gt;
+                            컨텐츠 내부
+                        &lt;/div&gt;
+                        &lt;div class="btn-wrap gap"&gt;
+                            &lt;button type="button" class="btn btn-default"&gt;취소&lt;/button&gt;
+                            &lt;button type="button" class="btn btn-primary"&gt;저장&lt;/button&gt;
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="dimmed-bg"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+
+            &lt;div class="modal alert-modal no-head"&gt;
+                &lt;div class="modal-wrap"&gt;
+                    &lt;button class="modal-close"&gt;닫기&lt;/button&gt;
+                    &lt;div class="modal-body p-2"&gt;
+                        &lt;div class="modal-content"&gt;
+                            컨텐츠 내부
+                        &lt;/div&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class="dimmed-bg"&gt;&lt;/div&gt;
+            &lt;/div&gt;
+            </pre>
+        </code>
+        <br>
+        <br>
+        <h2>토스트 기본</h2>
+        <div class="guide-modal-area" style="height: 24rem;">
+            <div class="toast-wrap show">
+                <div class="toast">
+                    <p class="desc">해당 상품이 장바구니에 담겼습니다</p><button class="modal-close" data-dismiss="toast"></button>
+                </div>
+            </div>
+            <div class="toast-wrap show">
+                <div class="toast">
+                    <p class="desc">URL이 복사되었습니다</p><button class="modal-close" data-dismiss="toast"></button>
+                </div>
+            </div>
+        </div>
+        <code class="guide-code">
+            <pre>
+                &lt;div class="toast-wrap"&gt;
+                    &lt;div class="toast"&gt;
+                        &lt;p class="desc"&gt;&lt;/p&gt;
+                        &lt;button class="modal-close"&gt;&lt;/button&gt;
+                    &lt;/div&gt;
+                &lt;/div&gt;
+            </pre>
+        </code>
+    </div>
+
+</div>

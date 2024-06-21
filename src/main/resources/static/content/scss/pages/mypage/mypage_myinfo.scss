@@ -1,0 +1,184 @@
+@import "../user/user";
+@import 'mypage_main';
+
+.mypage{
+
+    .user-page{
+        min-height: unset;
+    }
+    &-myInfo{
+        .intro{
+            .content{
+                &-img{
+                    display: $block;
+                    width: 9rem;
+                    height: auto;
+                    margin: 0 auto 2rem;
+                }
+
+                &-info{
+                    display: $block;
+                    text-align: center;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    line-height: 1.38;
+                    letter-spacing: -0.05rem;
+                    margin-bottom: 2rem;
+                }
+            }
+
+            .form-line{
+                margin-bottom: 4rem;
+            }
+
+            .btn-confirm{
+                display: $block;
+                max-width: 16rem;
+                font-size: 1.6rem;
+                margin: 0 auto;
+            }
+        }
+
+        .content{
+            .user-page{
+                margin-left: 0;
+            }
+        }
+        .dot-list.large-dot{
+            padding-top: 0;
+            border-top: none;
+        }
+
+        .toggle-title {
+            h2 {
+                font-size: 2.2rem;
+                letter-spacing: -0.04rem;
+            }
+        }
+
+        .link-wrap {
+            margin-bottom: 0;
+        }
+    }
+
+    .toggle-title {
+        border-top: 1px solid $colorBlack;
+        margin-top: 4rem;
+
+        &:first-child {
+            margin-top: 0;
+        }
+    }
+
+    &-password{
+        .user-page{
+            margin-left: 0;
+        }
+
+        .link-wrap{
+            max-width: 100%;
+        }
+
+        .form-title {
+            margin-bottom: .4rem;
+        }
+    }
+    &-sns{
+        .sns-interlock{
+            max-width: 58.2rem;
+            margin: 0 auto 0 0 ;
+            >li{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: .1rem solid $lineGrey;
+                background-color: $colorWhite;
+                @include round(.5rem);
+                padding: 1.4rem;
+
+                & + li{
+                    margin-top: 1rem;
+                }
+
+                p{
+                    &,
+                    >span{
+                        @extend %flexVCenter;
+                    }
+
+                    .ico{
+                        width: 3.6rem;
+                        height: 3.6rem;
+                        padding: 0 0.36rem;
+                        margin-right: 1.4rem;
+                    }
+                    strong{
+                        display: $inlineBlock;
+                        font-size: 1.6rem;
+                        font-weight: bold;
+                        line-height: 1.5;
+                        margin-right: .6rem;
+                    }
+                    .status{
+                        display: $inlineBlock;
+                        color: $fontDark;
+                    }
+                }
+            }
+        }
+
+        .dot-list{
+            margin-top: 4rem;
+        }
+    }
+}
+
+@include mobile{
+    .mypage{
+
+        &-password{
+            .link-wrap{
+                border-top: none;
+                padding-top: 2rem;
+            }
+        }
+
+        &-sns{
+            .sns-interlock{
+                li{
+                    padding: 2.4rem 1.4rem;
+                    p{
+                        .ico{
+                            padding: 0 .2rem;
+                        }
+                        > span{
+                            flex-direction: column;
+                            align-items: flex-start;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-myInfo{
+            &.mypage {
+                .mypage-inner {
+                    padding-top: 0;
+                }
+            }
+            .intro{
+                .content-info{
+                    line-height: 1.25;
+                    margin-bottom: 2rem;
+                }
+            }
+            .toggle-title {
+                border-top: none;
+
+                &.active + .toggle-content {
+                    padding: 3rem 0 0 ;
+                }
+            }
+        }
+    }
+}

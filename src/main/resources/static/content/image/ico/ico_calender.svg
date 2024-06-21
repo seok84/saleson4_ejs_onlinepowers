@@ -1,0 +1,21 @@
+<svg id="구성_요소_2757_2" data-name="구성 요소 2757 – 2" xmlns="http://www.w3.org/2000/svg" width="15" height="16" viewBox="0 0 15 16">
+  <g id="사각형_31197" data-name="사각형 31197" transform="translate(0 1)" fill="#fff" stroke="#000" stroke-width="1">
+    <rect width="15" height="15" rx="1" stroke="none"/>
+    <rect x="0.5" y="0.5" width="14" height="14" rx="0.5" fill="none"/>
+  </g>
+  <rect id="사각형_31198" data-name="사각형 31198" width="15" height="4" rx="1" transform="translate(0 1)"/>
+  <rect id="사각형_31201" data-name="사각형 31201" width="3" height="3" transform="translate(2 7)"/>
+  <rect id="사각형_31206" data-name="사각형 31206" width="3" height="3" transform="translate(2 11)"/>
+  <rect id="사각형_31202" data-name="사각형 31202" width="3" height="3" transform="translate(6 7)"/>
+  <rect id="사각형_31205" data-name="사각형 31205" width="3" height="3" transform="translate(6 11)"/>
+  <rect id="사각형_31203" data-name="사각형 31203" width="3" height="3" transform="translate(10 7)"/>
+  <rect id="사각형_31204" data-name="사각형 31204" width="3" height="3" transform="translate(10 11)"/>
+  <g id="사각형_31199" data-name="사각형 31199" transform="translate(3)" fill="#fff" stroke="#000" stroke-width="1">
+    <rect width="2" height="3" rx="1" stroke="none"/>
+    <rect x="0.5" y="0.5" width="1" height="2" rx="0.5" fill="none"/>
+  </g>
+  <g id="사각형_31200" data-name="사각형 31200" transform="translate(10)" fill="#fff" stroke="#000" stroke-width="1">
+    <rect width="2" height="3" rx="1" stroke="none"/>
+    <rect x="0.5" y="0.5" width="1" height="2" rx="0.5" fill="none"/>
+  </g>
+</svg>

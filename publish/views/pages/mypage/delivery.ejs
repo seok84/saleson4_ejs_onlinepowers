@@ -1,0 +1,147 @@
+<section class="mypage-address">
+    <!-- //본문 -->
+    <div class="title-container m-line-divider">
+        <h2 class="title-h2">배송주소록 관리</h2>
+        <div class="btn-wrap ">
+            <button type="button" class="btn btn-default btn-action" onclick="salesOnUI.modal().show('.address-modal')">
+                <img src="/static/content/image/ico/ico_plus.svg" class="ico-plus">새 배송지 추가
+            </button>
+            <button type="button" class="btn btn-black btn-action btn-set-default">기본 배송지로 설정</button>
+        </div>
+    </div>
+    <!-- //주소록 리스트 -->
+    <ul class="address-container">
+        <li class="address-list">
+            <div class="radio-wrap">
+                <label class="input-radio"><input type="radio" name="userAddress" checked><i></i></label>
+            </div>
+            <div class="address-content">
+                <div class="title"><strong>배송지</strong><span class="default">기본배송지</span></div>
+                <p>[08381] 서울특별시 구로구 디지털로27길 24 711 온라인파워스</p>
+                <p>010 - 1234 - 5678</p>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-default btn-middle">수정</button>
+                <button type="button" class="btn btn-default btn-middle">삭제</button>
+            </div>
+        </li>
+        <li class="address-list">
+            <div class="radio-wrap">
+                <label class="input-radio"><input type="radio" name="userAddress"><i></i></label>
+            </div>
+            <div class="address-content">
+                <div class="title"><strong>배송지</strong></div>
+                <p>[08381] 서울특별시 구로구 디지털로27길 24 711 온라인파워스</p>
+                <p>010 - 1234 - 5678</p>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-default btn-middle">수정</button>
+                <button type="button" class="btn btn-default btn-middle">삭제</button>
+            </div>
+        </li>
+        <li class="address-list">
+            <div class="radio-wrap">
+                <label class="input-radio"><input type="radio" name="userAddress"><i></i></label>
+            </div>
+            <div class="address-content">
+                <div class="title"><strong>배송지</strong></div>
+                <p>[08381] 서울특별시 구로구 디지털로27길 24 711 온라인파워스</p>
+                <p>010 - 1234 - 5678</p>
+            </div>
+            <div class="btn-wrap">
+                <button type="button" class="btn btn-default btn-middle">수정</button>
+                <button type="button" class="btn btn-default btn-middle">삭제</button>
+            </div>
+        </li>
+    </ul>
+    <div class="mobile">
+        <div class="btn-wrap">
+            <button type="button" class="btn btn-default btn-black2 btn-set-default">기본 배송지로 설정</button>
+        </div>
+    </div>
+    <div class="no-contents">
+        <p class="info">등록된 배송지 정보가 없습니다.</p>
+    </div>
+    <!-- // 페이징 -->
+    <div class="pagination">
+        <a href="javascript:;" class="page-item"><span class="page-prev">이전페이지</span></a>
+        <a href="javascript:;" class="page-item active"><span class="page-link">1</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-link">2</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-link">3</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-link">4</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-link">5</span></a>
+        <a href="javascript:;" class="page-item"><span class="page-next">이전페이지</span></a>
+    </div>
+</section>
+<!-- 배송지 추가 모달 -->
+<div class="modal address-modal">
+    <div class="dimmed-bg" data-dismiss></div>
+    <div class="modal-wrap">
+        <button class="modal-close" data-dismiss>닫기</button>
+        <div class="modal-header">
+            배송지 추가
+        </div>
+        <div class="modal-body">
+            <form action="">
+                <div class="btn-wrap gap m-section-divider">
+                    <div class="btn btn-default btn-middle check-wrap">
+                        <label class="circle-input-checkbox purple"><input type="checkbox" checked><i></i>기본 배송지로
+                            설정</label>
+                    </div>
+                    <div class="btn btn-default btn-middle check-wrap">
+                        <label class="circle-input-checkbox purple"><input type="checkbox"><i></i>기본 배송지
+                            가져오기</label>
+                    </div>
+                </div>
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="배송지" />
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="받는사람" />
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <div class="form-line">
+                    <div class="flex">
+                        <input type="text" class="form-basic" placeholder="우편번호 찾기" />
+                        <button type="button" class="btn btn-black" onclick="salesOnUI.modal().show('.open-modal-address')">우편번호</button>
+                    </div>
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="기본주소" />
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="상세주소" />
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="휴대폰 또는 전화번호 숫자만 입력" />
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <div class="btn-wrap">
+                    <button type="submit" class="btn btn-primary w-160">저장</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- //배송지 추가 모달 -->
+
+<!-- 배송지 검색 모달 -->
+<div class="modal open-modal-address">
+    <div class="dimmed-bg" onclick="salesOnUI.modal().show('.address-modal')"></div>
+    <div class="modal-wrap">
+        <button class="modal-close" onclick="salesOnUI.modal().show('.address-modal')">닫기</button>
+        <div class="modal-header">
+            배송지 검색
+        </div>
+        <div class="modal-body">
+            <form action="">  
+                <iframe frameborder="0" title="우편번호 검색 프레임" id="__daum__viewerFrame_1" src="https://postcode.map.daum.net/search?origin=https%3A%2F%2Fsaleson4.onlinepowers.com&amp;indaum=off&amp;banner=on&amp;ubl=on&amp;mode=transmit&amp;vt=popup&amp;amr=on&amp;amj=on&amp;ani=off&amp;sd=on&amp;fi=on&amp;fc=on&amp;plrg=&amp;plrgt=1.5&amp;hmb=off&amp;heb=off&amp;asea=off&amp;smh=off&amp;zo=on&amp;us=on&amp;msi=10&amp;ahs=off&amp;whas=500&amp;sm=on&amp;a51=off&amp;zn=Y&amp;fullpath=%2Fmypage%2Finfo%2Fdelivery" style="border:0 none;margin:0;width:100%;height:100%;min-width:300px;overflow:hidden;padding:0"></iframe>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- //배송지 검색 모달 -->

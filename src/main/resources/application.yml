@@ -1,0 +1,77 @@
+server:
+  port: 8080
+  error:
+    whitelabel:
+      enabled: false
+
+  servlet:
+    jsp:
+      init-parameters:
+        development: true
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+
+logging:
+  level:
+    org.springframework.web: INFO
+
+saleson:
+  url:
+    backoffice: http://localhost:9080
+    api: http://localhost:7080
+    frontend: http://localhost:8080
+    cdn:
+
+  version: "4.0.0"
+  root: d:/onlinepowers/workspace/saleson3
+  storage-root: ${saleson.root}/saleson-backoffice/storage
+  maintenance:
+    enabled: false
+    begin:
+      date:
+      time:
+    end:
+      date:
+      time:
+  social:
+    kakao:
+      app-id: 1347dd85469c1000bd2686f4040a4d21
+      call-back: /user/sns/kakao-callback
+      rest-api-key: c090e1f65596aaca533ead362e4855bc
+    apple:
+      client-id: ''
+      redirect-url: ''
+    naver:
+      app-id: HEGPL8jkr8mQEVWjekMw
+      client-secret: fxH9btloaV
+      call-back: /user/sns/naver-callback
+
+# Resource Location
+resource:
+  static.location: file:${saleson.static-root}
+  storage.location: file:${saleson.storage-root}
+
+# 모니터링 설정
+management:
+  endpoints:
+    info.enabled: true
+    health.enabled: true
+    prometheus.enabled: true
+
+    web.exposure.include: prometheus, info, health
+    web.base-path: /op-monitor
+
+## Firebase
+firebase:
+  enabled: true
+  config:
+    apiKey: "AIzaSyCcD4UPxrCZlQwdTwXjhjehY7K81Rcz6wk"
+    authDomain: "saleson-bda35.firebaseapp.com"
+    projectId: "saleson-bda35"
+    storageBucket: "saleson-bda35.appspot.com"
+    messagingSenderId: "347422020169"
+    appId: "1:347422020169:web:3fae4c65d06f05ed22a598"
+    measurementId: "G-7VGK644T10"

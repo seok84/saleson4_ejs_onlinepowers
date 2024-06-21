@@ -1,0 +1,168 @@
+@import '../variables', '../placeholders', '../mixin';
+
+#aside-menu {
+    position: $fixed;
+    top: 30rem;
+    right: 3rem;
+    width: 7.2rem;
+    box-sizing: border-box;
+    z-index: 12;
+    
+    .quick-menu {
+        @include round(7.2rem);
+        width: $full;
+        padding: 2rem .8rem;
+        margin-bottom: 1rem;
+        background: $colorWhite;
+        border: .1rem solid $lineLight;
+
+        .menu {
+            @extend %flexCenter;
+            flex-wrap: wrap;
+            width: $full;
+            margin: 0 0 1rem;
+
+            &:before {
+                @extend %ico;
+                content: '';
+                width: 3rem;
+                height: 3rem;
+                margin: auto;
+                background-position: center;
+            }
+            
+            &.ico-mypage:before {
+                background-image: url('/static/content/image/ico/ico_aside_mypage.svg');
+            }
+
+            &.ico-heart:before {
+                background-image: url('/static/content/image/ico/ico_aside_heart.svg');
+            }
+
+            &.ico-recent:before {
+                background-image: url('/static/content/image/ico/ico_aside_time.svg');
+            }
+
+            &.ico-talk:before {
+                background-image: url('/static/content/image/ico/ico_aside_talk.svg');
+            }
+
+            i,
+            span {
+                display: $block;
+                width: $full;
+                text-align: center;
+            }
+
+            i {
+                font-family: $numberFont;
+                font-size: 1.1rem;
+                font-weight: bold;
+                font-style: normal;
+                line-height: 1.4rem;
+                color: $pointRequired;
+            }
+
+            span {
+                line-height: 1.7rem;
+                letter-spacing: -0.1rem;
+                word-spacing: -0.1rem;
+                color: $fontBlackDark;
+                font-size: 1.2rem;
+                font-weight: 500;
+            }
+        }
+
+    }
+
+    .toggle-area {
+        display: none;
+        margin: 0 0 2rem;
+        border-bottom: .1rem solid $lineLight;
+        transition: all .1s ease-in-out;
+        
+        &.on {
+            display: $block;
+            + .btn-toggle:before {
+                transform: rotate(0);
+            }
+        }
+        + .btn-toggle:before {
+            transform: rotate(180deg);
+        }
+
+    }
+
+    .btn-toggle {
+        display: $block;
+        margin: 0 auto;
+        text-align: center;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+        letter-spacing: -.06rem;
+
+        &:before {
+            @extend %ico;
+            content: '';
+            width: 2.2rem;
+            height: 1.1rem;
+            margin: 0 auto .2rem;
+            background-image: url('/static/content/image/ico/ico_aside_arrow_up.svg');
+        }
+    }
+
+    .btn-top {
+        @include round($full);
+        width: 7.2rem;
+        height: 7.2rem;
+        background: $brandPrimary;
+        font-size: 1.2rem;
+        font-weight: 500;
+        line-height: 1.7rem;
+        color: $colorWhite;
+
+        &::before {
+            @extend %ico;
+            content: '';
+            width: 1.5rem;
+            height: 1rem;
+            margin: 0 auto .3rem;
+            text-align: center;
+            background-image: url('/static/content/image/ico/ico_aside_top.svg');
+        }
+
+    }
+}
+
+@media (max-width: 1360px) {
+    #aside-menu {
+        top: inherit;
+        right: 1rem;
+        bottom: 7rem;
+        margin: 0;
+        width: auto;
+        transform: none;
+
+        .quick-menu {
+            display: none;
+        }
+        
+        .btn-top {
+            display: $inlineFlex;
+            justify-content: center;
+            align-items: center;
+            width: 4rem;
+            height: 4rem;
+            background: $colorWhite;
+            box-shadow: .1rem .1rem .3rem rgba(0,0,0,.6);
+            font-size: 0;
+            
+            &::before {
+                width: 1.2rem;
+                height: 1.5rem;
+                background-image: url('/static/content/image/ico/ico_aside_top_m.svg');
+            }
+        }
+
+    }
+}

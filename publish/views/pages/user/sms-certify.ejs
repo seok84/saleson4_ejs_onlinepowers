@@ -1,0 +1,33 @@
+<div class="user-page">
+    <!-- // 회원가입 -->
+    <h1 class="title-h1">회원가입</h1>
+    <form action="">
+        <div>
+            <p class="form-title">SMS인증</p>
+            <div class="form-line mb-10">
+                <input type="text" class="form-basic" placeholder="이름을 입력하세요" />
+                <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+            </div>
+            <div class="form-line mb-10">
+                <div class="flex">
+                    <input type="text" class="form-basic" placeholder="휴대폰 번호를 입력하세요" />
+                    <button type="button" class="btn btn-black m-w-98">인증요청</button><!-- 인증요청 -> 재전송 -->
+                    <!--<button type="button" class="btn btn-black m-w-98">재전송</button> 인증요청 -> 재전송 -->
+                </div>
+                <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+            </div>
+            <div class="form-line mb-10">
+                <div class="flex">
+                    <span class="time-limit">50초</span><!-- 20240306 -->
+                    <input type="text" class="form-basic" placeholder="인증번호를 입력하세요" />
+                    <button type="button" class="btn btn-black m-w-98">인증완료</button>
+                </div>
+                <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+            </div>
+            <div class="link-wrap">
+                <nuxtLink to="/" class="btn btn-default w-half link-item">취소</nuxtLink>
+                <button type="button" class="btn btn-primary w-half link-item">다음</button>
+            </div>
+        </div>
+    </form>
+</div>

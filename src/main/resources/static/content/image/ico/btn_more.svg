@@ -1,0 +1,7 @@
+<svg id="btn_more" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+  <rect id="사각형_29883" data-name="사각형 29883" width="48" height="48" fill="#fff" opacity="0"/>
+  <g id="main_arrow" transform="translate(9 12)">
+    <rect id="사각형_26301" data-name="사각형 26301" width="16" height="28" transform="translate(7 -2)" fill="rgba(255,133,133,0)"/>
+    <path id="패스_4099" data-name="패스 4099" d="M6662.7,124.25l12,12-12,12" transform="translate(-6653.703 -124.25)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="4"/>
+  </g>
+</svg>

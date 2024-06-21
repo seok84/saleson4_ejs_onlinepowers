@@ -1,0 +1,281 @@
+@import '../variables', '../placeholders', '../mixin';
+
+#footer {
+    padding-bottom: 10rem;
+
+    section.footer-info {
+        margin-bottom: 0;
+    }
+
+    .link-area,
+    .footer-brand,
+    .cs-center,
+    .info {
+        color: $fontBlackDark;
+    }
+
+    .link-area,
+    .footer-brand,
+    .cs-center{
+        margin: 0 0 2rem;
+    }
+
+    .info{
+        margin: 0
+    }
+
+    .link-area {
+        @extend %flexVCenter;
+        background: $bgLight;
+        border-width: .1rem 0;
+        border-style: solid;
+        border-color: $lineLight;
+
+        .flex {
+            @extend %flexBetween, %flexVCenter;
+            height: 4.4rem;
+            margin-bottom: 0;
+        }
+
+        a {
+            display: $inlineFlex;
+            align-items: center;
+            height: $full;
+            padding: 0 1rem 0 1.1rem;
+            font-size: 1.3rem;
+            color: $fontDark;
+            position: $rel;
+
+            &:before {
+                position: absolute;
+                top: $half;
+                left: 0;
+                transform: translateY(-$half);
+                content: '';
+                display: $block;
+                width: .1rem;
+                height: 1.2rem;
+                background: $bgGreyLight;
+                
+            }
+
+            &:first-of-type {
+                padding-left: 0;
+                &::before {
+                    display: none;
+                }
+            }
+
+            &:last-of-type {
+                padding-right: 0;
+            }
+
+        }
+    }
+
+    .footer-brand {
+        max-width: 15rem;
+    }
+
+    .cs-center {
+        .cs-tel {
+            font-size: 1.6rem;
+            font-weight: bold;
+            margin: 0 0 .4rem;
+            color: $colorBlack;
+            
+            .tel {
+                color: $brandSecondary;
+            }
+        }
+        
+        .cs-time {
+            font-size: 1.2rem;
+            line-height: 1.7rem;
+            letter-spacing: -.05rem;
+            color: $bgVeryDark;
+        }
+    }
+
+    .info {
+        .company {
+            font-size: 1.5rem;
+            font-weight: 500;
+            margin-bottom: .4rem;
+            color: $colorBlack;
+        }
+        p {
+            line-height: 1.4;
+            font-size: 1.2rem;
+            font-weight: 400;
+            letter-spacing: -0.02rem;
+        }
+        .business-info,
+        .company-info{
+            color: $fontGrey;
+
+            span{
+                display: $inlineBlock;
+                margin-right: 1rem;
+            }
+        }
+
+        .business-info a{
+            position: relative;
+            display: $inlineBlock;
+            text-decoration: underline;
+            padding-right: 1rem;
+
+            &::after{
+                content: '';
+                position: $offset;
+                top:50%;
+                right: 0;
+                width: 0.4em;
+                height: 0.4em;
+                border-top: .1rem solid $lineGreyLight;
+                border-right: .1rem solid $lineGreyLight;
+                transform: translateY(-50%) rotate(45deg);
+            }
+        }
+        
+        .copyright{
+            margin-top: 2rem;
+            color: $fontGrey;
+        }
+    }
+}
+
+@include laptop {
+    #footer {
+        .link-area,
+        .cs-center,
+        .info,
+        .copyright {
+            padding: 0 1.6rem;
+            color: $bgVeryDark;
+        }
+    }
+}
+
+@include tablet {
+    #footer {
+
+        .link-area {
+            min-height: 4.4rem;
+
+            &.bottom {
+                flex-wrap: wrap;
+                padding: 1rem 0;
+                margin: 1.4rem 1.6rem .7rem;
+                background: $colorWhite;
+
+                a {
+                    line-height: 1.9rem;
+                }
+            }
+        }
+
+        .company {
+            display: $flex;
+            align-items: center;
+            padding: 0 0 1.2rem;
+            margin: 0 0 1rem;
+            border-bottom: .1rem solid $lineLight;
+
+            &:after {
+                content: '';
+                display: $inlineBlock;
+                width: 1.1rem;
+                height: .7rem;
+                margin: 0 0 0 .8rem;
+                background-image: url('/static/content/image/ico/ico_footer_arrow_down.svg');
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+
+        .business-number,
+        .business-type {
+            display: $block;
+            letter-spacing: -0.04rem;
+            word-spacing: -0.04rem;
+        }
+    }
+
+}
+
+@include mobile {
+    #footer{
+        .footer-brand{
+            margin: 0 0 1rem;
+
+        }
+        .info{
+            .company{
+                border: none;
+                margin-bottom: 0;
+                padding: 0 0 .8rem;
+
+                &.on ~ .toggle-footer-info {
+                    display: block;
+                }
+
+                &.on::after{
+                    transform-origin: center;
+                    transform: rotate(180deg);
+                }
+                
+            }
+
+            .toggle-footer-info{
+                display: none;
+                span {
+                    margin-right: .4rem;
+                }
+            }
+        }
+
+        .copyright{
+            display: $block;
+            font-size: 1.2rem;
+            margin-top: 2rem;
+        }
+    }
+}
+
+@media (max-width: 464px) {
+    #footer {
+        .link-area.bottom {
+            a:nth-child(5) {
+                padding-left: 0;
+                &::before {
+                    display: none;
+                }
+            }
+        }
+    }
+
+}
+
+
+@media (max-width: 404px) {
+    #footer {
+        .link-area.bottom {
+            a:nth-child(4) {
+                padding-left: 0;
+                &::before {
+                    display: none;
+                }
+            }
+
+            a:nth-child(5) {
+                padding-left: 1.1rem;
+                &::before {
+                    display: $block;
+                }
+            }
+        }
+    }
+
+}

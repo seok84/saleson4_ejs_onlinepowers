@@ -1,0 +1,28 @@
+<div class="user-page find-idpw">
+    <h1 class="title-h1">비밀번호 변경하기</h1>
+    <h3 class="form-title">기존 비밀번호</h3>
+    <div class="form-line">
+        <input type="password" class="form-basic" placeholder="기존 비밀번호" />
+        <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+    </div>
+    <h3 class="form-title">새 비밀번호</h3>
+    <div class="form-line">
+        <input type="password" class="form-basic" placeholder="8~16자 이내 영문, 숫자, 특수문자" />
+        <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+    </div>
+    <h3 class="form-title">새 비밀번호 재입력</h3>
+    <div class="form-line">
+        <input type="password" class="form-basic" placeholder="비밀번호를 다시 한번 입력하세요" />
+        <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+    </div>
+    <div class="link-wrap">
+        <button type="button" class="btn btn-primary confirm-btn">저장</button>
+    </div>
+</div>
+
+<script>
+    // modal 호출 UI sample
+    $(document).ready(function(){
+        salesOnUI.inputPasswordUI();
+    });
+</script>

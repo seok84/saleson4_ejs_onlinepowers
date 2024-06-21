@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_32739" data-name="사각형 32739" width="22" height="22" transform="translate(206 1222)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_590" data-name="마스크 그룹 590" transform="translate(-206 -1222)" clip-path="url(#clip-path)">
+    <g id="그룹_32662" data-name="그룹 32662" transform="translate(207 1224)">
+      <path id="합치기_238" data-name="합치기 238" d="M13.443,13.8l-1.88-1.182q-.1,0-.2,0H6.31A6.311,6.311,0,1,1,6.31,0h5.049a6.311,6.311,0,0,1,3.6,11.5v1.665c.016.763-.265,1-.609,1A1.755,1.755,0,0,1,13.443,13.8Z" transform="translate(2.364)" fill="#fff" stroke="#8559ee" stroke-width="1.5"/>
+      <rect id="사각형_31674" data-name="사각형 31674" width="1.683" height="1.683" rx="0.841" transform="translate(6.15 5.47)" fill="#8559ee"/>
+      <rect id="사각형_31675" data-name="사각형 31675" width="1.683" height="1.683" rx="0.841" transform="translate(10.357 5.47)" fill="#8559ee"/>
+      <rect id="사각형_31676" data-name="사각형 31676" width="1.683" height="1.683" rx="0.841" transform="translate(14.564 5.47)" fill="#8559ee"/>
+      <path id="합치기_239" data-name="합치기 239" d="M3.793,8.51a3.793,3.793,0,0,1,0-7.585H6.826l.123,0L8.079.216c.3-.216.928-.484.909.384v1A3.793,3.793,0,0,1,6.826,8.51Z" transform="translate(10.618 18.067) rotate(180)" fill="#fff" stroke="#8559ee" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

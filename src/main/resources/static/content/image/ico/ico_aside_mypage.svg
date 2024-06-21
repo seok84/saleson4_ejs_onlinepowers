@@ -1,0 +1,25 @@
+<svg id="ic_my" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30" height="30" viewBox="0 0 30 30">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_31127" data-name="사각형 31127" width="10" height="5" transform="translate(481.5 650.5)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <rect id="사각형_26362" data-name="사각형 26362" width="30" height="30" fill="rgba(255,133,133,0)" opacity="0.36"/>
+  <g id="그룹_31119" data-name="그룹 31119" transform="translate(-471.5 -634.5)">
+    <rect id="사각형_31064" data-name="사각형 31064" width="21" height="21" transform="translate(476 639)" fill="red" opacity="0"/>
+    <g id="타원_1844" data-name="타원 1844" transform="translate(476 639)" fill="none" stroke="#000" stroke-width="1.5">
+      <circle cx="10.5" cy="10.5" r="10.5" stroke="none"/>
+      <circle cx="10.5" cy="10.5" r="9.75" fill="none"/>
+    </g>
+    <g id="그룹_31177" data-name="그룹 31177" transform="translate(0.156 0.214)">
+      <path id="패스_10795" data-name="패스 10795" d="M-18880.656-23129.213v2" transform="translate(19364.5 23775.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+      <path id="패스_10796" data-name="패스 10796" d="M-18880.656-23129.213v2" transform="translate(19369.5 23775.5)" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.5"/>
+    </g>
+    <g id="마스크_그룹_526" data-name="마스크 그룹 526" clip-path="url(#clip-path)">
+      <g id="사각형_31126" data-name="사각형 31126" transform="translate(481.5 648.5)" fill="none" stroke="#000" stroke-width="1.5">
+        <path d="M0,0H10a0,0,0,0,1,0,0V2A5,5,0,0,1,5,7H5A5,5,0,0,1,0,2V0A0,0,0,0,1,0,0Z" stroke="none"/>
+        <path d="M.75.75h8.5a0,0,0,0,1,0,0V2A4.25,4.25,0,0,1,5,6.25H5A4.25,4.25,0,0,1,.75,2V.75A0,0,0,0,1,.75.75Z" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

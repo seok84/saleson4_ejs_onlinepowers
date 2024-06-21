@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.874" y1="0.13" x2="0.165" y2="0.789" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#30e685"/>
+      <stop offset="1" stop-color="#2bb7ff"/>
+    </linearGradient>
+  </defs>
+  <g id="그룹_37488" data-name="그룹 37488" transform="translate(16958 7251)">
+    <circle id="타원_1895" data-name="타원 1895" cx="11" cy="11" r="11" transform="translate(-16958 -7251)" fill="url(#linear-gradient)"/>
+    <text id="W" transform="translate(-16947.002 -7235)" fill="#fff" font-size="12" font-family="Montserrat-ExtraBold, Montserrat" font-weight="800" letter-spacing="-0.05em"><tspan x="-7.104" y="0">W</tspan></text>
+  </g>
+</svg>

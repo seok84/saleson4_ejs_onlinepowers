@@ -1,0 +1,18 @@
+<svg id="ic_list_basket_02" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.105" height="23.066" viewBox="0 0 22.105 23.066">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_26355" data-name="사각형 26355" width="12" height="11" fill="none" stroke="#fff" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+  <rect id="사각형_31064" data-name="사각형 31064" width="22.105" height="23.066" fill="rgba(255,255,255,0)" opacity="0"/>
+  <g id="마스크_그룹_84" data-name="마스크 그룹 84" transform="translate(5.053 0.533)" clip-path="url(#clip-path)">
+    <g id="사각형_26354" data-name="사각형 26354" fill="none" stroke="#fff" stroke-width="1.5">
+      <rect width="12" height="16" rx="6" stroke="none"/>
+      <rect x="0.75" y="0.75" width="10.5" height="14.5" rx="5.25" fill="none"/>
+    </g>
+  </g>
+  <g id="패스_10788" data-name="패스 10788" transform="translate(-469.578 -635.145)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M469.631,641.676l2,15h18l2-15Z" stroke="none"/>
+    <path d="M 471.3441772460938 643.1759643554688 L 472.9441528320312 655.1759643554688 L 488.317626953125 655.1759643554688 L 489.9176635742188 643.1759643554688 L 471.3441772460938 643.1759643554688 M 469.6309204101562 641.6759643554688 L 491.6309509277344 641.6759643554688 L 489.6308898925781 656.6759643554688 L 471.6308898925781 656.6759643554688 L 469.6309204101562 641.6759643554688 Z" stroke="none" fill="#fff"/>
+  </g>
+</svg>

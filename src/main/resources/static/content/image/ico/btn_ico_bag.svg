@@ -1,0 +1,20 @@
+<svg id="그룹_39576" data-name="그룹 39576" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="48" viewBox="0 0 48 48">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_26355" data-name="사각형 26355" width="12" height="10.8" fill="none" stroke="#000" stroke-width="1.5"/>
+    </clipPath>
+  </defs>
+  <rect id="사각형_26362" data-name="사각형 26362" width="48" height="48" fill="rgba(255,133,133,0)" opacity="0.36"/>
+  <g id="ic_gnb_basket" transform="translate(9 9)">
+    <rect id="사각형_26360" data-name="사각형 26360" width="30" height="30" fill="rgba(255,133,133,0)" opacity="0.36"/>
+    <g id="그룹_22043" data-name="그룹 22043" transform="translate(-472 -635)">
+      <g id="마스크_그룹_84" data-name="마스크 그룹 84" transform="translate(481 638)" clip-path="url(#clip-path)">
+        <g id="사각형_26354" data-name="사각형 26354" fill="none" stroke="#000" stroke-width="1.5">
+          <rect width="12" height="16.8" rx="6" stroke="none"/>
+          <rect x="0.75" y="0.75" width="10.5" height="15.3" rx="5.25" fill="none"/>
+        </g>
+      </g>
+      <path id="패스_10788" data-name="패스 10788" d="M469.631,641.676l2,16h18l2-16Z" transform="translate(6.369 4.824)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saleson</title>
+ 
+    <!-- global style -->
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
+    <!-- <link rel="stylesheet" href="/static/content/css/layout/layout.css"> -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/static/content/js/common.js"></script>
+
+    <!-- ejs css select -->
+    <% if(styleNo == 0) { %>
+    <link rel="stylesheet" href="/static/content/css/pages/main/main.css">
+        
+    <% } else if (styleNo == 1) { %>
+    <link rel="stylesheet" href="/static/content/css/pages/user/user.css">
+
+    <% } else if (styleNo == 2) { %>
+    <link rel="stylesheet" href="/static/content/css/pages/cart/cart.css">
+    <link rel="stylesheet" href="/static/content/css/pages/cart/cart-modal.css">
+    <link rel="stylesheet" href="/static/content/css/pages/items/item_list.css">
+
+    <% } else if (styleNo == 3) { %>
+    <link rel="stylesheet" href="/static/content/css/pages/components/modal.css">
+    <link rel="stylesheet" href="/static/content/css/pages/items/item_list.css">
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_coupon.css">
+  
+    <% } else if (styleNo == 4) { %>
+    <link rel="stylesheet" href="/static/content/css/pages/items/item_list.css">
+    <link rel="stylesheet" href="/static/content/css/pages/display/display.css">
+
+    <% } else if (styleNo == 5) { %>
+    <link rel="stylesheet" href="/static/content/css/pages/user/user.css">
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_main.css">
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_myinfo.css">
+        
+    <% } else if (styleNo == 6) { %>
+    <link rel="stylesheet" href="/static/content/css/pages/featured/featured.css">
+    
+    <% } else if (styleNo == 7) { %>
+    <!-- search -->
+    <link rel="stylesheet" href="/static/content/css/pages/items/item_list.css">
+    <link rel="stylesheet" href="/static/content/css/pages/customer/customer_main.css">
+    
+    <% } else if (styleNo == 8) { %>
+    <!-- search -->
+    <link rel="stylesheet" href="/static/content/css/pages/search/search.css">
+
+
+    <% } else if (styleNo == 9) { %>
+    <!-- check -->
+    <link rel="stylesheet" href="/static/content/css/pages/terms/terms_main.css">
+        
+    <% } else if (styleNo == 10) { %>
+    <!-- error -->
+    <link rel="stylesheet" href="/static/content/css/layout/error.css">
+    
+    <% } else { %>
+        <link rel="stylesheet" href="/static/content/css/common.css">
+    <% } %>
+
+</head>
+<body>
+    <div class="fixed-header">
+        <!-- topbanner -->
+        <%- include ('topbanner') %>
+    
+        <!-- header -->
+        <% if(headerTypeNo == 0) { %>
+            <!-- 
+                브랜드 + 검색 + 장바구니 + Quick Link, 
+                eg) 메인, 상품리스트. 
+                개별클래스 :: brand searching basket quicklink
+            -->
+            <header id="header" class="header-default">
+        
+        <% } else if(headerTypeNo == 1) { %>
+            <!-- 
+                뒤로가기 + 브랜드 + 검색 + 장바구니, 
+                eg) 검색결과 
+                개별클래스 :: pageback brand searching basket
+            -->
+            <header id="header" class="header-search">
+    
+        <% } else if(headerTypeNo == 2) { %>
+            <!-- 뒤로가기 + 타이틀 + 장바구니, 
+                eg) 장바구니, 주문/결제, 마이페이지, 고객센터, 회원가입, 로그인
+                개별클래스 ::pageback page-title basket
+             -->
+            <header id="header" class="header-detail">
+    
+        <% } else if(headerTypeNo == 3) { %>
+            <!-- 뒤로가기
+                eg) 상품상세, 회원가입, 로그인
+                개별클래스 ::pageback page-title searching basket
+                -->
+            <header id="header" class="header-items-detail">
+                
+        <% } else { %>
+    
+        <% } %>
+    
+            <%- include ('header') %>
+        </header>
+        
+    </div>
+        
+    <!-- body -->
+    <div class="content-inner">
+        <%- body %>
+    </div>
+
+    <!-- aside-menu -->
+    <aside id="aside-menu">
+        <%- include ('aside') %>
+    </aside>
+
+    <!-- footer -->
+    <footer>
+        <%- include ('footer') %>
+    </footer>
+
+    <!-- aside-menu -->
+    <div class="mobile-category">
+        <%- include ('mobile_gnb') %>
+    </div>
+
+</body>
+</html>

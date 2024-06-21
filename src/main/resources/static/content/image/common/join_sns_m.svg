@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30">
+  <g id="그룹_36519" data-name="그룹 36519" transform="translate(0.299)">
+    <rect id="사각형_31807" data-name="사각형 31807" width="30" height="30" transform="translate(-0.299)" fill="rgba(255,255,255,0)"/>
+    <g id="그룹_36517" data-name="그룹 36517" transform="translate(2.351 6)">
+      <path id="합치기_221" data-name="합치기 221" d="M11.7,16.433l-1-1.333a1.054,1.054,0,0,1-.066-.1H7.5a7.5,7.5,0,0,1,0-15h10a7.5,7.5,0,1,1,0,15H14.366a1.054,1.054,0,0,1-.066.1l-1,1.333a1,1,0,0,1-1.6,0Z" fill="#fff" stroke="#000" stroke-width="1.5"/>
+      <g id="그룹_36518" data-name="그룹 36518" transform="translate(7.5 7)">
+        <circle id="타원_1891" data-name="타원 1891" cx="1" cy="1" r="1" transform="translate(4)"/>
+        <circle id="타원_1894" data-name="타원 1894" cx="1" cy="1" r="1"/>
+        <circle id="타원_1893" data-name="타원 1893" cx="1" cy="1" r="1" transform="translate(8)"/>
+      </g>
+    </g>
+  </g>
+</svg>

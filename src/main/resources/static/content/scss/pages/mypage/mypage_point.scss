@@ -1,0 +1,151 @@
+@import 'mypage_main';
+
+.mypage-point{
+    .useable-point-box{
+        position: relative;
+        @extend %flexCenter02;
+        @include round(.3rem);
+        height: 11.2rem;
+        background-color: $bgPrimaryLight;
+        margin-bottom: 3rem;
+
+        p{
+            font-size: 2.2rem;
+            font-weight: 500;
+            color: $colorBlack;
+
+            em{
+                font-family: $numberFont;
+                font-weight: bold;
+                font-size: 2.4rem;
+                display: $inlineBlock;
+                margin-left: .6rem;
+                color: $brandPrimary;
+            }
+        }
+
+        &::before{
+            content: '';
+            position: $offset;
+            top:0;
+            right:22.5rem;
+            z-index: 1;
+            width: 5rem;
+            height: 5.4rem;
+            @extend %ico;
+            background-image: url("/static/content/image/mypage/ico_point_small.png");
+            transform: translateY(-20%);
+        }
+        &::after{
+            content: '';
+            position: $offset;
+            bottom:0;
+            left:20rem;
+            z-index: 1;
+            width: 6.8rem;
+            height: 7.6rem;
+            @extend %ico;
+            background-image: url("/static/content/image/mypage/ico_point_big.png");
+            transform: translateY(20%);
+        }
+    }
+    .point-list{
+        display: flex;
+        flex-direction: column;
+
+        .list{
+            padding: 2rem;
+            border: .1rem solid $lineGrey;
+            @include round(1rem);
+            margin-bottom: 2rem;
+
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+
+            .title{
+                display: flex;
+                justify-content: space-between;
+                align-items: flex-start;
+                line-height: 1.38;
+                margin-bottom: 1rem;
+
+                strong{
+                    flex:3;
+                    font-size: 1.6rem;
+                    font-weight: 500;
+                    word-break: break-all;
+                    padding-right: 1.4rem;
+                }
+
+                .point{
+                    flex:1;
+                    display: $inlineBlock;
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: $pointRequired;
+                    text-align: right;
+
+                    &.used{
+                        color: $fontMedium;
+                    }
+                }
+            }
+
+            .info{
+                font-size: 1.4rem;
+                line-height: 1.4;
+                color: $fontGrey;
+                span{
+                    display: $inlineBlock;
+                }
+                .sub{
+                    width: 8rem;
+                }
+            }
+        }
+    }
+}
+
+@include mobile{
+    .mypage-point{
+        
+        .useable-point-box{
+            height: 9rem;
+            margin-bottom: 0;
+            &::before{
+                top: 25%;
+                right: 10%;
+            }
+            &::after{
+                left: 10%;
+                width: 4.8rem;
+                height: 5.6rem;
+            }
+
+            p{
+                font-size: 1.6rem;
+                em{
+                    display: $block;
+                    margin: 0;
+                    font-size: 2rem;
+                    line-height: 1.2;
+                }
+            }
+        }
+        .tabs{
+            margin-bottom: 1rem;
+        }
+        .tabs-content{
+            .flex{
+                .input-select{
+                    flex:1;
+                    margin-right: .8rem;
+                }
+                .btn-form{
+                    max-width: 9rem;
+                }
+            }
+        }
+    }
+}

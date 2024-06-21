@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20">
+  <defs>
+    <clipPath id="clip">
+      <use xlink:href="#fill"/>
+    </clipPath>
+    <clipPath id="clip-2">
+      <use xlink:href="#fill-2"/>
+    </clipPath>
+    <clipPath id="clip-3">
+      <use xlink:href="#fill-3"/>
+    </clipPath>
+    <clipPath id="clip-4">
+      <use xlink:href="#fill-4"/>
+    </clipPath>
+  </defs>
+  <g id="그룹_37492" data-name="그룹 37492" transform="translate(14456 -1728)">
+    <g id="사각형_31788" data-name="사각형 31788" transform="translate(-14456 1728)" fill="rgba(255,255,255,0)" stroke="rgba(112,112,112,0)" stroke-width="1">
+      <rect width="20" height="20" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+    </g>
+    <g id="구성_요소_2763_56" data-name="구성 요소 2763 – 56" transform="translate(-14454 1731)">
+      <g id="ic_down" transform="translate(14.9 14.072) rotate(180)">
+        <path id="합치기_4" data-name="합치기 4" d="M3.311,4.14,0,0ZM0,8.278,3.311,4.14Z" transform="translate(3.27 7.45) rotate(-90)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"/>
+        <g id="사각형_1685" data-name="사각형 1685" transform="translate(6.788 4.139)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <rect id="fill" width="1.242" height="9.933" rx="0.621" stroke="none"/>
+          <path d="M0,1h1.24163818359375M1,0v9.93310546875M1.24163818359375,8.93310546875h-1.24163818359375M0.24163818359375,9.93310546875v-9.93310546875" fill="none" clip-path="url(#clip)"/>
+        </g>
+        <g id="사각형_2903" data-name="사각형 2903" transform="translate(14.9) rotate(90)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+          <rect id="fill-2" width="1.242" height="14.9" rx="0.621" stroke="none"/>
+          <path d="M0,1h1.24163818359375M1,0v14.899658203125M1.24163818359375,13.899658203125h-1.24163818359375M0.24163818359375,14.899658203125v-14.899658203125" fill="none" clip-path="url(#clip-2)"/>
+        </g>
+      </g>
+      <g id="사각형_31786" data-name="사각형 31786" transform="translate(1.242 14.072) rotate(180)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <rect id="fill-3" width="1.242" height="3.311" rx="0.621" stroke="none"/>
+        <path d="M0,1h1.24163818359375M1,0v3.31103515625M1.24163818359375,2.31103515625h-1.24163818359375M0.24163818359375,3.31103515625v-3.31103515625" fill="none" clip-path="url(#clip-3)"/>
+      </g>
+      <g id="사각형_31787" data-name="사각형 31787" transform="translate(14.9 14.072) rotate(180)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+        <rect id="fill-4" width="1.242" height="3.311" rx="0.621" stroke="none"/>
+        <path d="M0,1h1.24163818359375M1,0v3.31103515625M1.24163818359375,2.31103515625h-1.24163818359375M0.24163818359375,3.31103515625v-3.31103515625" fill="none" clip-path="url(#clip-4)"/>
+      </g>
+    </g>
+  </g>
+</svg>

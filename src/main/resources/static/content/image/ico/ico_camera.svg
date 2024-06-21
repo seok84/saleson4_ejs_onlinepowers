@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22" height="22" viewBox="0 0 22 22">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="사각형_32740" data-name="사각형 32740" width="22" height="22" transform="translate(-12942 -5040)" fill="#fff" stroke="#707070" stroke-width="1"/>
+    </clipPath>
+  </defs>
+  <g id="마스크_그룹_591" data-name="마스크 그룹 591" transform="translate(12942 5040)" clip-path="url(#clip-path)">
+    <g id="그룹_37242" data-name="그룹 37242" transform="translate(-12941.45 -5037)">
+      <g id="사각형_32684" data-name="사각형 32684" transform="translate(0.45 3)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="21" height="14" rx="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="20" height="13" rx="0.5" fill="none"/>
+      </g>
+      <g id="타원_1963" data-name="타원 1963" transform="translate(6.45 5)" fill="#fff" stroke="#000" stroke-width="1">
+        <circle cx="5" cy="5" r="5" stroke="none"/>
+        <circle cx="5" cy="5" r="4.5" fill="none"/>
+      </g>
+      <g id="타원_1964" data-name="타원 1964" transform="translate(8.45 7)" fill="#fff" stroke="#000" stroke-width="1">
+        <circle cx="3" cy="3" r="3" stroke="none"/>
+        <circle cx="3" cy="3" r="2.5" fill="none"/>
+      </g>
+      <g id="사각형_32685" data-name="사각형 32685" transform="translate(5.45)" fill="#fff" stroke="#000" stroke-width="1">
+        <rect width="12" height="4" rx="1" stroke="none"/>
+        <rect x="0.5" y="0.5" width="11" height="3" rx="0.5" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

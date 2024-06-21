@@ -1,0 +1,177 @@
+@import '../common';
+
+.checking-site{
+    .check{
+        &-site{
+            position: $fixed;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("~/assets/image/sample/bg_check.jpg");
+            background-position: top left;
+            background-size: contain;
+            background-repeat: repeat;
+        }
+        &-wrap{
+            display: $block;
+            width: 100%;
+            max-width: 54rem;
+            max-height: 70rem;
+            padding: 6rem 4rem;
+            margin: 2rem;
+            border-radius: 1rem;
+            box-sizing: border-box;
+            background-color: $colorWhite;
+            box-shadow: 0 1rem 3rem 0 rgba(0, 0, 0, 0.04);
+            text-align: center;
+        }
+        &-img{
+            margin-bottom: 2.4rem;
+        }
+        &-title{
+            font-size:3rem;
+            font-weight: 800;
+            line-height: normal;
+            color: $colorBlack;
+            margin-bottom: 4.8rem;
+        }
+        &-info-sub{
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: $colorBlack;
+            line-height: 1.3;
+        }
+    }
+    .pc{
+        .check{
+            &-info{
+                &-title{
+                    display: $inlineBlock;
+                    line-height: 4rem;
+                    margin: 0 auto 1.2rem;
+                    padding: 0 2.6rem;
+                    background-color: $brandPrimary;
+                    border-radius: 5rem;
+                    color: $colorWhite;
+                    font-size: 1.8rem;
+                    font-weight: 500;
+                }
+                &-content{
+                    line-height: 1.3;
+                    letter-spacing: -0.06rem;
+                    word-spacing: -0.02rem;
+                    font-size: 1.8rem;
+                    font-weight: 600;
+                    font-family: $numberFont,$notoSans;
+                    em{
+                        font-weight: 500;
+                    }
+    
+                }
+            }
+            &-list{
+                &-title{
+                    margin: 4.8rem auto .6rem;
+                    font-size: 1.6rem;
+                    font-weight: 600;
+                    color: $colorBlack;
+                }
+                &-content{
+                    display: flex;
+                    flex-direction: column;
+                    line-height: 2;
+                    margin-bottom: 4.8rem;
+                    font-size: 1.4rem;
+                    color: $fontDark;
+                }
+            }
+
+        }
+    }
+    .mobile{
+        .check{
+            &-info{
+                &-title{
+                    position: relative;
+                    font-size: 1.6rem;
+                    font-weight: bold;
+                    color: $brandPrimary;
+                    margin-bottom: .4rem;
+                    text-align: left;
+                    padding-left: 2rem;
+                    &::before{
+                        content:'';
+                        position: relative;
+                        display: $inlineBlock;
+                        width: .4rem;
+                        height: .4rem;
+                        border-radius: .4rem;
+                        background-color: $brandPrimary;
+                        transform: translateY(-100%);
+                        margin-right: .6rem;
+                    }
+                }
+                &-content{
+                    font-size: 1.4rem;
+                    padding-left: 3rem;
+                    text-align: left;
+                    margin-bottom: 2rem;
+                }
+            }
+            &-list{
+                &-wrap{
+                    margin-top: 3rem;
+                    padding: 2rem 5rem 0;
+                    border-top: .1rem solid $lineGrey;
+                }
+                &-title{
+                    margin-bottom: .4rem;
+                    font-size: 1.4rem;
+                    font-weight: 500;
+                    text-align: left;
+                }
+                &-content{
+                    text-align: left;
+                    margin-bottom: 3rem;
+                    font-size: 1.2rem;
+                    color: $fontDark;
+                    letter-spacing: -0.08rem;
+                    li{
+                        line-height: 1.67;
+                    }
+                }
+            }
+
+        }
+    }
+
+}
+
+@include mobile{
+    .checking-site{
+        .check{
+            &-wrap{
+                max-width: calc(100% - 3.2rem);
+                margin: 3rem 1.6rem;
+                padding: 3rem 2rem;
+            }
+            &-img{
+                width: 13.8rem;
+                margin-bottom: 1rem;
+            }
+            &-title{
+                font-size: 1.8rem;
+                margin-bottom: 2rem;
+            }
+            &-info-sub{
+                font-size: 1.4rem;
+                word-break: keep-all;
+            }
+        }
+    }
+}

@@ -1,0 +1,822 @@
+<div class="contents-area-page order-page">
+    <h1 class="title-h1 pc">주문/결제</h1>
+    <div class="contents-area" ref="targetElement">
+        <div class="contents-left">
+
+            <!-- 주문자정보 -->
+            <div class="toggle-title active">
+                <h2>주문자정보</h2>
+                <button type="button" class="toggle-arr"></button>
+            </div>
+            
+            <div class="toggle-content info-delivery">
+                <!-- 이름 -->
+                <div class="form-line">
+                    <input type="text" class="form-basic disabled" placeholder="홍길동" disabled />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+                <!-- 전화번호 -->
+                <div class="form-line">
+                    <input type="text" class="form-basic disabled" placeholder="01011112222" />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+                <!-- 이메일 -->
+                <div class="form-line">
+                    <input type="email" class="form-basic disabled" placeholder="abc@abc.com" />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+            </div>
+
+
+            <!-- 배송정보 -->
+            <div class="toggle-title active">
+                <h2>배송정보</h2>
+                <button type="button" class="toggle-arr"></button>
+            </div>
+            
+            <!-- 20240222 변경 -->
+            <div class="toggle-content info-delivery">
+                <!-- 이름 -->
+                <!-- 비회원은 disabled x -->
+                <div class="form-line">
+                    <input type="text" class="form-basic disabled" placeholder="홍길동" disabled />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+                <!-- 전화번호 -->
+                <!-- 비회원은 disabled x -->
+                <div class="form-line">
+                    <input type="text" class="form-basic disabled" placeholder="01011112222" />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+
+                <!-- 주소 (회원)-->
+                <div class="form-line">
+                    <div class="flex">
+                        <input type="text" class="form-basic disabled" placeholder="08318" />
+                        <button class="btn btn-black" onclick="salesOnUI.modal().show('.modal-address-list')">주소변경</button>
+                    </div>
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+                <div class="form-line">
+                    <input type="text" class="form-basic disabled" placeholder="서울 구로구 디지털로27길 24(벽산디지털밸리)" disabled />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="711호 온라인파워스" disabled />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+                <!-- 주소 (비회원)-->
+                <!-- <div class="form-line">
+                    <div class="flex">
+                        <input type="text" class="form-basic disabled" placeholder="우편번호" />
+                        <button class="btn btn-black">우편번호</button>
+                    </div>
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+                <div class="form-line">
+                    <input type="text" class="form-basic disabled" placeholder="기본주소" />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="711호 온라인파워스" />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div> -->
+                <!-- 배송문구 -->
+                <div class="select-wrap">
+                    <select class="input-select">
+                        <option value="">직접입력</option>
+                        <option value="">집앞</option>
+                        <option value="">경비실</option>
+                    </select>
+                </div>
+                <!-- 배송문구 - 직접입력 선택일 때만 노출 -->
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="직접입력" />
+                    <span class="feedback invalid">유효성 메시지</span>
+                </div>
+            </div>
+
+            <!-- 주문 상품리스트 -->
+            <div class="toggle-title active toggle-order-list">
+                <h2>주문상품 정보 (N개)</h2>
+                <button type="button" class="toggle-arr"></button>
+            </div>
+            <div class="toggle-content brand-container"> <!-- 반복요소 brand-container -->
+                <div class="brand-name">스윙앤슬라이드 업체명(N)</div>
+                <div class="brand-wrap">
+                    <div class="product-list-container"> <!-- 반복요소 product-list-container -->
+                        <ul class="product-list-wrap">
+                            <li class="product-list order-list"> <!-- 반복요소 product-list -->
+                                <div class="product-info-group">
+                                    <div class="product-info info1">
+                                        <!-- 아이템 -->
+                                        <div class="product-item">
+                                            <div class="item-list-container horizon">
+                                                <div class="item-list">
+                                                    <!-- 아이템 썸네일 영역 -->
+                                                    <div class="thumbnail-container sold-out">
+                                                        <div class="sold-out-wrap">
+                                                            <span>
+                                                                <img src="/static/content/image/sample/sold-out.png" alt="품절">
+                                                            </span>
+                                                        </div>
+                                                        <div class="thumbnail-wrap">
+                                                            <div class="thumbnail-area">
+                                                                <img class="top-left"
+                                                                    src="/static/content/image/sample/thum_area.png"
+                                                                    alt="플로팅이미지" />
+                                                                <img class="top-right"
+                                                                    src="/static/content/image/sample/thum_area.png"
+                                                                    alt="플로팅이미지" />
+                                                                <img class="bottom-left"
+                                                                    src="/static/content/image/sample/thum_area.png"
+                                                                    alt="플로팅이미지" />
+                                                                <img class="bottom-right"
+                                                                    src="/static/content/image/sample/thum_area.png"
+                                                                    alt="플로팅이미지" />
+                                                                <img class="center-center">
+                                                            </div>
+                                                            <img class="thumbnail" src="/static/content/image/sample/thum.png"
+                                                                alt="썸네일">
+                                                        </div>
+                                                        <div class="user-action">
+                                                            <div class="user-ico user-attention">관심상품</div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- 아이템 정보 영역 -->
+                                                    <div class="info-container">
+                                                        <div class="title-main paragraph-ellipsis">
+                                                            <b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는
+                                                            영역
+                                                            50g
+                                                            X 2 제품명이 노출되는 영역 50g X 2
+                                                        </div>
+                                                        <div class="title-sub paragraph-ellipsis">
+                                                            <b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브
+                                                            타이틀
+                                                            서브
+                                                            타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+                                                            서브 타이틀 서브 타이틀 서브 타이틀 서브
+                                                            타이틀
+                                                        </div>
+    
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-info info2">
+                                        <div class="info2-list">
+                                            <div class="product-info2-price">
+                                                <p>상품가 21,000</p>
+                                                <p>할인 6,000</p>
+                                            </div>
+                                            <p class="discounted">할인적용가 20,000</p>
+                                        </div>
+                                        <p class="quantity">수량:NNN개</p>
+                                    </div>
+                                    <div class="product-info info3">
+                                        <p class="coupon-apply">쿠폰적용완료</p>
+                                        <button class="btn btn-round btn-coupon" onclick="salesOnUI.modal('.modal-apply-coupon')">상품 쿠폰 적용</button>
+                                        <p class="coupon-none">적용 쿠폰 없음</p>
+                                    </div>
+                                </div>
+                                <div class="product-price">
+                                    <div class="price-info info1">
+                                        <p>상품금액 2,000원 + 배송비 3,000원<b>= 23,000원</b></p>
+                                        <p>(<b>30,000원 이상</b> 무료배송)</p>
+                                    </div>
+                                    <div class="price-info info2">
+                                        <p>판매자 조건부<b>(본사)</b></p>
+                                        <i class="tooltip-handler">!</i>
+                                        <div class="tooltip-wrap">
+                                            <div class="dimmed-bg" data-dismiss-tooltip></div>
+                                            <div class="text-center tooltip-content tooltip-delivery">
+                                                <button class="btn-tooltip-close" data-dismiss-tooltip>닫기</button>
+                                                <p class="tooltip-tit">판매자 조건부 무료배송</p>
+                                                <p class="txt2">판매자 상품 30,000원 이상 구매 시 무료,<br />
+                                                    30,000원 미만 구매 시 2,500원 부과 </p>
+                                                <p class="txt1">제주/도서산간</p>
+                                                <p class="txt2">제주 2,500원 추가 / 도서산간 2,500원 추가</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 포인트 -->
+            <div class="toggle-title active">
+                <h2>포인트</h2>
+                <button type="button" class="toggle-arr"></button>
+            </div>
+            <div class="toggle-content">
+                <div class="info-point">
+                    <div class="point-status">
+                        <p>보유 포인트</p>
+                        <p>9,999 P</p>
+                    </div>
+                    <div class="use-point-wrap">
+                        <div class="check-wrap">
+
+                            <label class="circle-input-checkbox"><input type="checkbox"><i></i>모두 사용</label>
+
+                        </div>
+                        <div class="use-point">
+
+                            <label class="input-point">
+                                <input type="text" value="0">
+                            </label>
+                            <!-- <button class="btn-point">포인트 사용</button> -->
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- 결제수단 -->
+            <div class="toggle-title active">
+                <h2>결제수단</h2>
+                <button type="button" class="toggle-arr"></button>
+            </div>
+            <div class="toggle-content info-payment-method">
+                <p>최근 결제수단으로 결제 : 신용카드</p>
+                <ul class="payment-wrap">
+                    <li class="payment default active" data-payment="account">
+                        <img src="/static/content/image/cart/payment_bank_free.svg" alt="default">
+                        <span>무통장입금</span>
+                    </li>
+                    <li class="payment default" data-payment="card">
+                        <img src="/static/content/image/cart/payment_card.svg" alt="default">
+                        <span>신용카드</span>
+                    </li>
+                    <li class="payment default" data-payment="private-account">
+                        <img src="/static/content/image/cart/payment_virtual.svg" alt="default">
+                        <span>가상계좌</span>
+                    </li>
+                    <li class="payment default" data-payment="mobile">
+                        <img src="/static/content/image/cart/payment_phone.svg" alt="default">
+                        <span>휴대전화</span>
+                    </li>
+                    <li class="payment default" data-payment="transfer">
+                        <img src="/static/content/image/cart/payment_realtime.svg" alt="default">
+                        <span>실시간 계좌이체</span>
+                    </li>
+                    <li class="payment easy naver">
+                        <img src="/static/content/image/cart/payment_naver.svg" alt="easy">
+                    </li>
+                    <li class="payment easy kakao">
+                        <img src="/static/content/image/cart/payment_kakao.svg" alt="easy">
+                    </li>
+                    <li class="payment easy toss">
+                        <img src="/static/content/image/cart/payment_toss.svg" alt="easy">
+                    </li>
+                    <li class="payment easy kb">
+                        <img src="/static/content/image/cart/payment_kb.svg" alt="easy">
+                    </li>
+                    <li class="payment easy hana">
+                        <img src="/static/content/image/cart/payment_hana.svg" alt="easy">
+                    </li>
+                </ul>
+                <!-- 무통장입금 -->
+                <div class="hidden payment-form-wrap account">
+                    <ul class="dot-list">
+                        <li>무통장 입금시 발생하는 수수료는 손님 부담입니다.</li>
+                        <li>인터넷 뱅킹 또는 은행창구 입금시 의뢰인(송금인)명은 ‘입금인 입력’ 란에 입금하신 성함과 동일하게 기재해 주시기 바랍니다. <br>
+                            ( 만약 다를 경우 고객센터 1234-5678로 꼭 연락주시기 바랍니다.)</li>
+                        <li>무통장 입금시 입금자와 입금 예정일을 입력해주세요.</li>
+                        <li>현금영수증 미신청시 현금영수증 발급이 되지 않습니다.</li>
+                    </ul>
+                    <form class="payment-form">
+                        <h3 class="form-title">입금은행</h3>
+                        <div class="select-wrap">
+                            <select class="input-select">
+                                <option value="">은행을 선택하세요</option>
+                                <option value="">셀렉트박스 옵션</option>
+                            </select>
+                        </div>
+                        <h3 class="form-title">입금자명</h3>
+                        <div class="form-line">
+                            <input type="text" class="form-basic" placeholder="입금자명" />
+                            <!-- <span class="feedback invalid">유효성 메시지</span> -->
+                        </div>
+                        <h3 class="form-title">입금예정일</h3>
+                        <div class="select-wrap">
+                            <select class="input-select">
+                                <option value="">2024-02-14</option>
+                            </select>
+                        </div>
+                        <h3 class="form-title">현금영수증 신청</h3>
+                        <div class="radio-wrap">
+                            <label class="input-radio"><input type="radio"><i></i>신청안함</label>
+                            <label class="input-radio"><input type="radio"><i></i>개인 소득공제용</label>
+                            <label class="input-radio"><input type="radio"><i></i>사업자 증빙용</label>
+                        </div>
+                        <div class="form-line">
+                            <input type="text" class="form-basic" placeholder="휴대전화 또는 사업자등록번호 숫자만 입력" />
+                            <!-- <span class="feedback invalid">유효성 메시지</span> -->
+                        </div>
+                    </form>
+                </div>
+
+                <!-- 신용카드 -->
+                <div class="hidden payment-form-wrap card">
+                    <ul class="dot-list">
+                        <li>신용카드 부정사용을 방지하기 위해 보유카드에 따라 '인터넷 안전결제(ISP)’ 혹은 '안심클릭' 결제를 의무적으로 사용해야 합니다.</li>
+                        <li>전자금융거래 기본법에 의해, 30만원 이상 결제 시 신용카드(간편결제 포함)용 공인인증서가 필요합니다.</li>
+                        <li>신용카드(간편결제 포함) 결제 시, 1,000원 미만은 결제가 불가능하오니 '실시간 계좌이체를 선택하여 결제해 주시길 바랍니다.</li>
+                        <li>부가세법 시행령에 따라 신용카드(간편결제 포함) 영수증으로 부가세 신고가 가능하며 세금계산서는 별도로 발급되지 않습니다.</li>
+                        <li>법인/체크/선불/GIFT 카드는 무이자 할부에서 제외 됩니다.</li>
+                    </ul>
+                </div>
+
+                <!-- 가상계좌 -->
+                <div class="hidden payment-form-wrap private-account">
+                    <ul class="dot-list">
+                        <li>가상계좌 입금시 발생하는 수수료는 손님 부담입니다.</li>
+                        <li>인터넷 뱅킹 또는 은행창구 입금시 의뢰인(송금인)명은 ‘입금인 입력’란에 입금하신 성함과 동일하게 기재해 주시기 바랍니다.
+                            <br>
+                            (만약 다를 경우 고객센터 1599-7751로 꼭 연락주시기 바랍니 다.)
+                        </li>
+                        <li>가상계좌 입금시 입금자와 입금 예정일을 입력해주세요.</li>
+                    </ul>
+                    <form class="payment-form">
+                        <h3 class="form-title">에스크로</h3>
+                        <div class="radio-wrap">
+                            <label class="input-radio"><input type="radio"><i></i>사용안함</label>
+                            <label class="input-radio"><input type="radio"><i></i>사용</label>
+                        </div>
+                        <ul class="dot-list">
+                            <li>고객님이 결제하신 금액을 PG사에서 예치한 후, 배송완료 시 당사로 입금되는 구매안전 서비스입니다.</li>
+                            <li>당사는 나이스페이 에스크로를 통해 구매안전 서비스를 제공하고 있습니다.</li>
+                            <li>에스크로 서비스를 이용하실 경우, 결제시스템 정책 상 부분취소 및 반품이 불가합니다.</li>
+                        </ul>
+                    </form>
+                </div>
+
+                <!-- 휴대전화 -->
+                <div class="hidden payment-form-wrap mobile">
+                    <ul class="dot-list">
+                        <li>휴대폰으로 결제하신 금액은 익월 휴대폰 요금에 함께 청구되며 별도의 수수료는 부과되지 않습니다.</li>
+                        <li>휴대폰 소액결제로 구매하실 경우 현금영수증이 발급되지 않습니다.</li>
+                        <li>다음의 경우에는 휴대폰 결제를 이용하실 수 없습니다.
+
+                            <div>
+                                - 미납/체납 중인 휴대폰 요금이 있을 경우 <br>
+                                - 이동통신사 가입기간(번호이동포함) 6개월 이하인 경우<br>
+                                - 외국인, 미성년자 요금제, 법인휴대폰, 선불요금제인 경우<br>
+                                - LGT 이용자 중 통신사로 [자동결제] 차단 신청하신 경우
+                            </div>
+
+                        </li>
+                        <li>휴대폰으로 결제 가능한 최대 금액은 월 30만원 이며 개인별 한도 금액은 통신사 및 개인 설정에 따라 다를 수 있습니다.</li>
+                        <li>휴대폰으로 결제하신 금액은 익월 휴대폰 요금에 함께 청구되며 별도의 수수료는 부과되지 않습니다.
+                            <div>
+                                - 결제 당월 취소/반품/품절환불 : 휴대폰 이용요금에 부과예정이던 금액이 취소됩니다.<br>
+                                - 결제 당월 지난 후 취소/반품/품절환불 : 환불계좌 확인 후 무통장 계좌로
+                            </div>
+                        </li>
+                        <li>휴대폰결제관련 문의사항은 LG유플러스전자결제 고객센터 1544-7772 또는 29CM 1644-0560으로 연락해주시기 바랍니다.</li>
+                    </ul>
+                </div>
+
+                <!-- 실시간계좌이체 -->
+                <div class="hidden payment-form-wrap transfer">
+                    <ul class="dot-list">
+                        <li>우측 [결제하기]를 클릭하여 토스페이먼츠 계좌이체 화면에서 결제정보를 입력해주시길 바랍니다.</li>
+                        <li>대금 청구 시 가맹점 란에는 대상에프앤비㈜으로 기재됩니다.</li>
+                    </ul>
+                    <form class="payment-form">
+                        <h3 class="form-title">에스크로</h3>
+                        <div class="mb-0 radio-wrap">
+                            <label class="input-radio"><input type="radio"><i></i>사용안함</label>
+                            <label class="input-radio"><input type="radio"><i></i>사용</label>
+                        </div>
+                    </form>
+
+                </div>
+
+            </div>
+
+            <!-- 결제 예정 금액 -->
+            <div class="total-expected">
+                <h3 class="content-title"><i class="ico"><img src="/static/content/image/ico/ico_money.svg"
+                            alt="결제 예정 금액"></i>결제 예정 금액</h3>
+                <ul class="expected-info-wrap">
+                    <li class="expected-info primary first">
+                        <p>총 상품금액</p>
+                        <p>9,999,999<b>원</b></p>
+                    </li>
+                    <li class="expected-info">
+                        <p>상품할인</p>
+                        <p>-500<b>원</b></p>
+                    </li>
+                    <li class="expected-info">
+                        <p>세트할인</p>
+                        <p>-500<b>원</b></p>
+                    </li>
+                    <li class="expected-info">
+                        <p>회원할인(FAMILY)</p>
+                        <p>-1,000<b>원</b></p>
+                    </li>
+
+                    <li class="expected-info primary">
+                        <p>배송비</p>
+                        <p>9,999,999<b>원</b></p>
+                    </li>
+
+                    <li class="expected-info primary">
+                        <p>쿠폰할인</p>
+                        <p>9,999,999<b>원</b></p>
+                    </li>
+                    <li class="expected-info">
+                        <p>상품 쿠폰</p>
+                        <p>-500<b>원</b></p>
+                    </li>
+                    <li class="expected-info">
+                        <p>카테고리 쿠폰</p>
+                        <p>-500<b>원</b></p>
+                    </li>
+                    <li class="expected-info">
+                        <p>주문서 쿠폰</p>
+                        <p>-1,000<b>원</b></p>
+                    </li>
+
+                    <li class="expected-info primary">
+                        <p>포인트 사용</p>
+                        <p>9,999,999<b>P</b></p>
+                    </li>
+                    <li class="expected-info primary last">
+                        <p>최종 결제금액</p>
+                        <p>9,999,999<b>원</b></p>
+                    </li>
+
+
+                </ul>
+            </div>
+
+            <!-- 약관동의 -->
+            <div class="agree-terms mobile">
+                <div class="agree toggle-wrap active check-wrap"> <label class="circle-input-checkbox"><input
+                            type="checkbox"><i></i></label>
+                    개인정보 제 3자 제공동의
+                    <div class="toggle-arr"></div>
+                    <div class="toggle-content">
+                        개인정보 제 3자 제공동의 내용 자리입니다 개인정보 제 3자 제공동의 내용 자리입니다 개인정보 제 3자 제공동의 내용 자리입니다
+                    </div>
+                </div>
+                <div class="agree check-wrap">
+                    <label class="circle-input-checkbox"><input type="checkbox"><i></i></label>
+                    주문할 상품의 상품명, 상품가격, 배송정보를 확인하였으며, 구매에 동의 하시겠습니까?
+                </div>
+            </div>
+            
+            <div class="floating-bottom mobile">
+                <div class="price-info final">
+                    <p>총 결제금액(NN)</p>
+                    <p>9,999,999<b>원</b></p>
+                </div>
+                <button class="btn btn-primary btn-buy">결제하기</button>
+            </div>
+        </div>
+
+        <div class="contents-right">
+            <!-- 플로팅 어사이드 -->
+            <div class="floating-aside">
+                <div class="floating-contents">
+                    <div class="title">최종 결제금액</div>
+                    <ul class="content expected-info-wrap">
+
+                        <li class="expected-info primary first active"> <!-- 토글 시 active -->
+                            <p class="toggle-wrap">총 상품금액<i class="toggle-arr"></i></p>
+                            <p>9,999,999<b>원</b></p>
+                        </li>
+
+                        <li class="expected-info sub">
+                            <p>상품할인</p>
+                            <p>-500<b>원</b></p>
+                        </li>
+                        <li class="expected-info sub">
+                            <p>세트할인</p>
+                            <p>-500<b>원</b></p>
+                        </li>
+                        <li class="expected-info sub">
+                            <p>회원할인(FAMILY)</p>
+                            <p>-1,000<b>원</b></p>
+                        </li>
+                        <li class="expected-info primary dashed-none">
+                            <p>배송비</p>
+                            <p>+ 9,999,999<b>원</b></p>
+                        </li>
+                        <li class="expected-info primary dashed-none active"> <!-- 토글 시 active -->
+                            <p class="toggle-wrap">쿠폰할인<i class="toggle-arr"></i></p>
+                            <p>- 9,999,999<b>원</b></p>
+                        </li>
+                        <li class="expected-info sub">
+                            <p>상품 쿠폰</p>
+                            <p>-500<b>원</b></p>
+                        </li>
+                        <li class="expected-info sub">
+                            <p>카테고리 쿠폰</p>
+                            <p>-500<b>원</b></p>
+                        </li>
+                        <li class="expected-info sub">
+                            <p>주문서 쿠폰</p>
+                            <p>-1,000<b>원</b></p>
+                        </li>
+                        <li class="expected-info primary">
+                            <p>포인트 사용</p>
+                            <p>9,999,999<b>P</b></p>
+                        </li>
+                        <li class="expected-info primary last">
+                            <p>적립 예정 포인트</p>
+                            <p>9,999,999<b>P</b></p>
+                        </li>
+                    </ul>
+                    <div class="agree-terms">
+                        <div class="agree toggle-wrap active check-wrap"> 
+                            <label class="circle-input-checkbox"><input type="checkbox"><i></i></label>
+                            <span class="flex-vcenter toggle-terms">
+                                개인정보 제 3자 제공동의
+                                <div class="toggle-arr"></div>
+                            </span>
+                            <div class="toggle-content" style="display: none;">
+                                개인정보 제 3자 제공동의 내용 자리입니다 개인정보 제 3자 제공동의 내용 자리입니다 개인정보 제 3자 제공동의 내용 자리입니다
+                            </div>
+                        </div>
+                        <div class="agree check-wrap">
+                            <label class="circle-input-checkbox"><input type="checkbox"><i></i></label>
+                            주문할 상품의 상품명, 상품가격, 배송정보를 확인하였으며, 구매에 동의 하시겠습니까?
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-round btn-floating">주문하기</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- 팝업 -->
+    <!-- show 클래스로 노출여부 제어 -->
+    <!-- 상품쿠폰적용 -->
+    <div class="modal modal-apply-coupon">
+        <div class="dimmed-bg" data-dismiss></div>
+        <div class="modal-wrap">
+            <button class="modal-close" data-dismiss>닫기</button>
+            <div class="modal-header">
+                상품쿠폰적용
+            </div>
+            <div class="p-2 modal-body">
+                <p class="modal-desc">상품쿠폰 적용 <span>사용 가능한 쿠폰만 보여집니다.</span></p>
+                <div class="toggle-content brand-container">
+                    <div class="brand-wrap">
+                        <div class="product-list-container"> <!-- 반복요소 product-list-container -->
+                            <ul class="product-list-wrap">
+                                <li class="product-list cart-list"> <!-- 반복요소 product-list -->
+                                    <div class="product-info-group">
+                                        <div class="product-info info1">
+                                            <!-- 아이템 -->
+                                            <div class="product-item">
+                                                <div class="item-list-container horizon">
+                                                    <div class="item-list">
+                                                        <!-- 아이템 썸네일 영역 -->
+                                                        <div class="thumbnail-container sold-out">
+                                                            <div class="sold-out-wrap">
+                                                                <span>
+                                                                    <img src="/static/content/image/sample/sold-out.png" alt="품절">
+                                                                </span>
+                                                            </div>
+                                                            <div class="thumbnail-wrap">
+                                                                <div class="thumbnail-area">
+                                                                    <img class="top-left"
+                                                                        src="/static/content/image/sample/thum_area.png"
+                                                                        alt="플로팅이미지" />
+                                                                    <img class="top-right"
+                                                                        src="/static/content/image/sample/thum_area.png"
+                                                                        alt="플로팅이미지" />
+                                                                    <img class="bottom-left"
+                                                                        src="/static/content/image/sample/thum_area.png"
+                                                                        alt="플로팅이미지" />
+                                                                    <img class="bottom-right"
+                                                                        src="/static/content/image/sample/thum_area.png"
+                                                                        alt="플로팅이미지" />
+                                                                    <img class="center-center">
+                                                                </div>
+                                                                <img class="thumbnail" src="/static/content/image/sample/thum.png"
+                                                                    alt="썸네일">
+                                                            </div>
+                                                        </div>
+                                                        <!-- 아이템 정보 영역 -->
+                                                        <div class="info-container">
+                                                            <div class="title-main paragraph-ellipsis">
+                                                                <b>[브랜드명]</b>제품명이 노출되는 영역 50g X 2 제품명이 노출되는 영역 50g X 2 제품명이 노출되는
+                                                                영역
+                                                                50g
+                                                                X 2 제품명이 노출되는 영역 50g X 2
+                                                            </div>
+                                                            <div class="title-sub paragraph-ellipsis">
+                                                                <b>[옵션1]</b>서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 <b>[옵션2]</b> 서브 타이틀 서브
+                                                                타이틀
+                                                                서브
+                                                                타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀 서브 타이틀
+                                                                서브 타이틀 서브 타이틀 서브 타이틀 서브
+                                                                타이틀
+                                                            </div>
+    
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item-gift">
+                                                    <span><i>선물</i>구매 사은품</span>
+                                                    <span>루카랩 케어베어 씰 스티커 외 N1개</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="product-info info2">
+                                            <div class="info2-list">
+                                                <div class="product-info2-price">
+                                                    <p>상품가 21,000</p>
+                                                    <p>할인 6,000</p>
+                                                </div>
+                                                <p class="discounted">할인적용가 20,000</p>
+                                            </div>
+                                            <p class="quantity">수량:NNN개</p>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="select-coupon">
+                                <div class="select-wrap">
+                                    <select class="input-select">
+                                        <option value="">쿠폰을 선택해주세요.</option>
+                                        <option value="">셀렉트박스 옵션</option>
+                                    </select>
+                                </div>
+
+                            </div>
+                            <div class="product-price">
+                                <div class="price-info info1">
+                                    <p>상품금액 2,000원 + 배송비 3,000원<b>= 23,000원</b></p>
+                                </div>
+                                <div class="price-info info2">
+                                    <p>판매자 조건부<b>(본사)</b></p>
+                                    <i class="tooltip-handler">!</i>
+                                    <div class="tooltip-wrap">
+                                        <div class="dimmed-bg" data-dismiss-tooltip></div>
+                                        <div class="text-center tooltip-content tooltip-delivery">
+                                            <button class="btn-tooltip-close" data-dismiss-tooltip>닫기</button>
+                                            <p class="tooltip-tit">판매자 조건부 무료배송</p>
+                                            <p class="txt2">판매자 상품 30,000원 이상 구매 시 무료,<br />
+                                                30,000원 미만 구매 시 2,500원 부과 </p>
+                                            <p class="txt1">제주/도서산간</p>
+                                            <p class="txt2">제주 2,500원 추가 / 도서산간 2,500원 추가</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="btn-wrap gap">
+                        <button class="btn btn-primary">적용</button>
+                        <button class="btn btn-default" data-dismiss>취소</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 배송지 목록 -->
+    <div class="modal modal-address-list">
+        <div class="dimmed-bg" data-dismiss></div>
+        <div class="modal-wrap">
+            <button class="modal-close" data-dismiss>닫기</button>
+            <div class="modal-header">
+                배송지 목록
+            </div>
+            <div class="modal-body">
+                <ul class="address-container">
+                    <li class="address-list">
+                        <div class="radio-wrap">
+                            <label class="input-radio"><input type="radio" name="userAddress" checked><i></i></label>
+                        </div>
+                        <div class="address-content">
+                            <div class="title"><strong>배송지</strong><span class="default">기본배송지</span></div>
+                            <p>[08381] 서울특별시 구로구 디지털로27길 24 711 온라인파워스</p>
+                            <p>010 - 1234 - 5678</p>
+                        </div>
+                    </li>
+                    <li class="address-list">
+                        <div class="radio-wrap">
+                            <label class="input-radio"><input type="radio" name="userAddress"><i></i></label>
+                        </div>
+                        <div class="address-content">
+                            <div class="title"><strong>배송지</strong></div>
+                            <p>[08381] 서울특별시 구로구 디지털로27길 24 711 온라인파워스</p>
+                            <p>010 - 1234 - 5678</p>
+                        </div>
+                    </li>
+                    <li class="address-list">
+                        <div class="radio-wrap">
+                            <label class="input-radio"><input type="radio" name="userAddress"><i></i></label>
+                        </div>
+                        <div class="address-content">
+                            <div class="title"><strong>배송지</strong></div>
+                            <p>[08381] 서울특별시 구로구 디지털로27길 24 711 온라인파워스</p>
+                            <p>010 - 1234 - 5678</p>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btn-wrap gap">
+                    <button class="btn btn-primary">적용</button>
+                    <button class="btn btn-default" data-dismiss>취소</button>
+                </div>
+                <button class="btn btn-default btn-add-address" onclick="salesOnUI.modal('.address-modal')">배송지 추가</button>
+            </div>
+        </div>
+    </div>
+    <!-- 배송지 추가 -->
+    <div class="modal address-modal">
+        <div class="dimmed-bg" data-dismiss></div>
+        <div class="modal-wrap">
+            <button class="modal-close" data-dismiss>닫기</button>
+            <div class="modal-header">
+                배송지 추가
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="btn-wrap gap ">
+                        <div class="btn btn-default btn-middle check-wrap">
+                            <label class="circle-input-checkbox purple"><input type="checkbox" checked><i></i>기본 배송지로
+                                설정</label>
+                        </div>
+                        <div class="btn btn-default btn-middle check-wrap">
+                            <label class="circle-input-checkbox purple"><input type="checkbox"><i></i>기본 배송지
+                                가져오기</label>
+                        </div>
+                    </div>
+                    <div class="form-line">
+                        <input type="text" class="form-basic" placeholder="배송지" />
+                        <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                    </div>
+                    <div class="form-line">
+                        <input type="text" class="form-basic" placeholder="받는사람" />
+                        <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                    </div>
+                    <div class="form-line">
+                        <div class="flex">
+                            <input type="text" class="form-basic" placeholder="우편번호 찾기" />
+                            <button class="btn btn-black">우편번호</button>
+                        </div>
+                        <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                    </div>
+                    <div class="form-line">
+                        <input type="text" class="form-basic" placeholder="기본주소" />
+                        <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                    </div>
+                    <div class="form-line">
+                        <input type="text" class="form-basic" placeholder="상세주소" />
+                        <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                    </div>
+                    <div class="form-line">
+                        <input type="text" class="form-basic" placeholder="휴대폰 또는 전화번호 숫자만 입력" />
+                        <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                    </div>
+                    <div class="btn-wrap">
+                        <button type="submit" class="btn btn-primary w-160">저장</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script>
+$(document).ready(function(){
+    // scroll event ui
+	salesOnUI.scrollEvent('.contents-area');
+    
+    // modal event ui sample
+    //salesOnUI.modal().show('.modal-apply-coupon'); // coupin apply
+    //salesOnUI.modal().show('.modal-address-list'); // address list
+    //salesOnUI.modal().show('.address-modal'); // address add
+
+    // tooltip event ui sample
+    salesOnUI.tooltip('.tooltip-handler');
+    
+    salesOnUI.toggleHidden('.input-select', '.select-option')
+    
+    // toggle ui
+    salesOnUI.toggleActive('.toggle-title');
+    salesOnUI.toggleActive('.toggle-arr', '.toggle-wrap');
+    
+    // terms toggle ui
+    salesOnUI.toggleTerms();
+    
+    // payment tab
+    salesOnUI.paymentTab('.payment', '.payment-form-wrap');
+
+});
+</script>

@@ -1,0 +1,95 @@
+<div class="user-page">
+    <!-- // 로그인 -->
+    <h1 class="title-h1">로그인</h1>
+    <form action="">
+        <div class="form-line mb-10 m-mb-6">
+            <input type="text" class="form-basic" placeholder="아이디" />
+            <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+        </div>
+        <div class="form-line">
+            <input type="password" class="form-basic" placeholder="비밀번호" />
+            <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+        </div>
+        <div class="user-check-area">
+            <div class="check-wrap no-margin">
+                <label class="input-checkbox"><input type="checkbox"><i></i>아이디 저장</label>
+            </div>
+            <div class="find-idpw-area">
+                <a href="/find-id">아이디 찾기</a>
+                <span class="divider"></span>
+                <a href="/find-pw">비밀번호 찾기</a>
+            </div>
+        </div>
+        <button class="btn btn-primary btn-login">로그인</button>
+        <div class="sns-join-container">
+            <h2>SNS 계정으로 간편 로그인</h2>
+            <div class="sns-wrap">
+                <a href=""><span class="circle"><img src="/static/content/image/common/sns_kakao.svg" alt="카카오톡"></span><span
+                        class="sns-type">카카오톡</span></a>
+                <a href=""><span class="circle"><img src="/static/content/image/common/sns_naver.svg" alt="네이버"></span><span
+                        class="sns-type">네이버</span></a>
+                <a href=""><span class="circle"><img src="/static/content/image/common/sns_apple.svg" alt="애플"></span><span
+                        class="sns-type">애플</span></a>
+            </div>
+            <p class="get-joined">회원이 아니신가요?<a href="">회원가입</a></p>
+        </div>
+        <!-- // 비회원 주문조회 -->
+        <div class="non-member">
+            <button type="button" class="btn btn-default non-member-inquiry">
+                비회원 주문조회<span class="toggle-arr"></span>
+            </button>
+            <div class="non-member-content">
+                <p class="user-page-info">주문시 인증한 휴대폰번호로 인증을 통해<br />확인하실 수 있습니다.</p>
+                <div class="form-line mb-10">
+                    <input type="text" class="form-basic" placeholder="이름을 입력하세요" />
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <div class="form-line mb-10">
+                    <div class="flex">
+                        <input type="text" class="form-basic" placeholder="휴대폰 번호를 입력하세요" />
+                        <button class="btn btn-black">인증요청</button><!-- 인증요청 -> 재전송 -->
+                    </div>
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <div class="form-line mb-10">
+                    <div class="flex">
+                        <input type="text" class="form-basic" placeholder="인증번호를 입력하세요" />
+                        <button class="btn btn-black">인증요청</button>
+                    </div>
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <button type="button" class="btn btn-black2 user-number-inquiry">조회하기</button>
+            </div>
+        </div>
+    </form>
+    <!-- // 모달 -->
+    <!-- 비밀번호 변경 모달 -->
+    <div class="modal">
+        <div class="dimmed-bg" data-dismiss></div>
+        <div class="modal-wrap">
+            <button class="modal-close" data-dismiss>닫기</button>
+            <div class="modal-header">
+                비밀번호 변경
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-center">개인정보 도용으로 인한 피해를 예방하기 위해 90일 이상 비밀번호를 변경하지 않는 경우
+                    비밀번호 변경을 권장하고 있습니다.
+                </p>
+                <div class="btn-wrap gap">
+                    <a href="/change-pw" class="btn btn-primary">변경하기</a>
+                    <button type="button" class="btn btn-default">다음에</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script>
+    // modal 호출 UI sample
+    $(document).ready(function(){
+		salesOnUI.modal().show('.modal');
+		salesOnUI.toggleActive('.non-member-inquiry');
+        salesOnUI.inputPasswordUI();
+    });
+</script>

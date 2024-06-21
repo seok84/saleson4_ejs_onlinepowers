@@ -1,0 +1,219 @@
+<section class="customer customer-inquiry">
+    <div class="title-h1">고객센터</div>
+    <div class="customer-tab">
+        <a href="/customer/notice" class="link"><span>공지사항</span></a> <!-- active 활성화 -->
+        <a href="/customer/faq" class="link en"><span>FAQ</span></a>
+        <a href="/customer/qna" class="link active"><span>1:1문의</span></a>
+        <a href="/customer/partner" class="link"><span>제휴/입점문의</span></a>
+    </div>
+    <div class="container">
+        <div class="sort-wrap">
+            <span class="all-items">총 <strong>123</strong>개</span>
+            <button type="button" class="switch-details">1:1문의</button>
+        </div>
+        <!-- 1:1 문의 form -->
+        <div class="inquiry-form hidden">
+            <form>
+                <div class="select-wrap">
+                    <select class="input-select">
+                        <option value=""> 문의 유형을 선택하세요</option>
+                        <option value="">셀렉트박스 옵션</option>
+                    </select>
+                </div>
+                <!--
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="이름을 입력하세요" />
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+
+                <div class="form-line">
+                    <input type="email" class="form-basic" placeholder="example@company.com" />
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                -->
+                <div class="form-line">
+                    <input type="text" class="form-basic" placeholder="제목을 입력해주세요" />
+                    <span class="feedback invalid" style="display: none;">유효성 메시지</span>
+                </div>
+                <textarea name="" id="" cols="30" rows="10" class="form-basic text-area"
+                    placeholder="내용을 입력해주세요"></textarea>
+
+                <!-- <div class="upload-wrap">
+                    <label for="upload-file" class="btn btn-default-line">
+                        <input type="file" name="upload-file" id="upload-file" accept=".gif,.png,.jpg,.jpeg,.pdf" multiple>
+                        <span>파일선택</span>
+                    </label>
+                    <p class="file-placeholder">선택된 파일 없음</p>
+                    <div class="upload-preview hide"></div>
+                </div>
+                <ul class="dot-list large-dot">
+                    <li>제품리스트를 파일로 첨부하시면 빠른 견적 진행 가능합니다.</li>
+                    <li>10MB 이내의 jpg, gif, png, pdf 파일만 업로드 가능합니다.</li>
+                </ul> -->
+
+                <ul class="photo-list">
+                    <li class="photo-item">
+                        <img src="/static/content/image/sample/item_sample_01.png" alt="fileName" class="thumbnail">
+                        <button type="button" class="btn-delete"></button>
+                    </li>
+                    <li class="photo-item">
+                        <img src="/static/content/image/sample/no_content_720480.png" alt="fileName" class="thumbnail">
+                        <button type="button" class="btn-delete"></button>
+                    </li>
+                    <li class="photo-item">
+                        <img src="/static/content/image/sample/sample_02.png" alt="fileName" class="thumbnail">
+                        <button type="button" class="btn-delete"></button>
+                    </li>
+                    <li class="photo-item"><!-- photo-item은 최대 4개까지 -->
+                        <img src="/static/content/image/sample/sample_01.png" alt="fileName" class="thumbnail">
+                        <button type="button" class="btn-delete"></button>
+                    </li>
+                    <li class="add-photo"><!-- photo-item이 4개 이상이면 display:none-->
+                        <label for="upload-file"><input type="file" name="upload-file" id="upload-file"
+                            accept=".gif,.png,.jpg,.jpeg" multiple></label>
+                    </li>
+                </ul>
+                <ul class="dot-list">
+                    <li>5MB 이하의 사진 4장까지 첨부 가능</li>
+                </ul>
+                <div class="link-wrap gap">
+                    <button type="button" class="btn btn-primary link-item w-half">저장</button>
+                    <button type="button" class="btn btn-default link-item w-half">취소</button>
+                </div>
+            </form>
+        </div>
+        <!-- 문의 목록 -->
+        <ul class="inquiry-content">
+            <li>
+                <!-- 답변 상태 -->
+                <div class="delivery-status-wrap">
+                    <p class="status answer-waiting">답변대기</p>
+                </div>
+                <!-- 사용자 문의 -->
+                <div class="user-writing">
+                    <p class="title"><strong class="category">[환불문의]</strong><span class="question">질문자의 제목이 노출되고
+                            있습니다</span></p>
+                    <p class="content">고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고
+                        있습니다
+                        고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고 있습니다 </p>
+                </div>
+                <!-- 관리자답변 : X -->
+                <!-- <div class="admin-answer">
+                    <p class="administrator">관리자 답변</p>
+                    <div class="content">안녕하세요 고객님. 고객센터 입니다.
+                        저희 홈페이지를 찾아주신 고객님께 감사의 말씀을 드립니다.
+                        소중한 경험을 리뷰로 남겨주셔서 감사합니다.
+                    </div>
+                    <p class="date">답변일 2022-06-14</p>
+                </div> -->
+            </li>
+            <li>
+                <!-- 답변 상태 -->
+                <div class="delivery-status-wrap">
+                    <p class="status answer-completed">답변완료</p>
+                </div>
+                <!-- 사용자 문의 -->
+                <div class="user-writing">
+                    <p class="title"><strong class="category">[환불문의]</strong><span class="question">질문자의 제목이 노출되고
+                            있습니다</span></p>
+                    <p class="content">고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고
+                        있습니다
+                        고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고 있습니다 </p>
+                </div>
+                <!-- 관리자답변 -->
+                <div class="admin-answer">
+                    <p class="administrator">관리자 답변</p>
+                    <div class="content">안녕하세요 고객님. 고객센터 입니다.
+                        저희 홈페이지를 찾아주신 고객님께 감사의 말씀을 드립니다.
+                        소중한 경험을 리뷰로 남겨주셔서 감사합니다.
+                    </div>
+                    <p class="date">답변일 2022-06-14</p>
+                </div>
+            </li>
+            <li>
+                <!-- 답변 상태 -->
+                <div class="delivery-status-wrap">
+                    <p class="status answer-completed">답변완료</p>
+                </div>
+                <!-- 사용자 문의 -->
+                <div class="user-writing">
+                    <p class="title"><strong class="category">[환불문의]</strong><span class="question">질문자의 제목이 노출되고
+                            있습니다</span></p>
+                    <p class="content">고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고
+                        있습니다
+                        고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고 있습니다 고객이 남기는 질문 상세 내용이 노출되고 있습니다 </p>
+                    <ul class="photo-list">
+                        <li class="photo-item">
+                            <img src="/static/content/image/sample/item_sample_01.png" alt="fileName" class="thumbnail">
+                        </li>
+                        <li class="photo-item">
+                            <img src="/static/content/image/sample/no_content_720480.png" alt="fileName" class="thumbnail">
+                        </li>
+                        <li class="photo-item">
+                            <img src="/static/content/image/sample/sample_02.png" alt="fileName" class="thumbnail">
+                        </li>
+                        <li class="photo-item">
+                            <img src="/static/content/image/sample/sample_01.png" alt="fileName" class="thumbnail">
+                        </li>
+                    </ul>
+                </div>
+                <!-- 관리자답변 -->
+                <div class="admin-answer">
+                    <p class="administrator">관리자 답변</p>
+                    <div class="content">안녕하세요 고객님. 고객센터 입니다.
+                        저희 홈페이지를 찾아주신 고객님께 감사의 말씀을 드립니다.
+                        소중한 경험을 리뷰로 남겨주셔서 감사합니다.
+                    </div>
+                    <p class="date">답변일 2022-06-14</p>
+                </div>
+            </li>
+
+        </ul>
+        <ul class="pagination"> <!--  문의 글 5개 이상일때노출 -->
+            <li class="page-item"><span class="page-prev">이전페이지</span></li>
+            <li class="page-item active"><span class="page-link">1</span></li>
+            <li class="page-item"><span class="page-link">2</span></li>
+            <li class="page-item"><span class="page-link">3</span></li>
+            <li class="page-item"><span class="page-link">4</span></li>
+            <li class="page-item"><span class="page-link">5</span></li>
+            <li class="page-item"><span class="page-next">이전페이지</span></li>
+        </ul>
+        <!-- 문의 없음 -->
+        <div class="no-contents">
+            <img src="/static/content/image/common/img_noQna.png" alt="게시글 없음">
+            <p>작성하신 게시글이 없습니다.</p>
+        </div>
+    </div>
+</section>
+
+<div class="modal image-pop">
+    <div class="dimmed-bg" data-dismiss></div>
+    <ul class="image-wrap">
+        <button class="modal-close" data-dismiss>닫기</button>
+        <div class="pc">
+            <div class="expansion-img">
+                <img src="/static/content/image/sample/no_content_720480.png" alt="미리보기">
+            </div>
+        </div>
+        <ul class="image-list">
+            <li class="image-item"><img src="/static/content/image/sample/no_content_720480.png" alt=""></li>
+            <li class="image-item"><img src="/static/content/image/sample/sample_01.png" alt=""></li>
+            <li class="image-item"><img src="/static/content/image/sample/sample_02.png" alt=""></li>
+            <li class="image-item"><img src="/static/content/image/sample/no_content.png" alt=""></li>
+        </ul>
+    </ul>
+</div>
+
+<script>
+    $(document).ready(function(){
+        // 1:1 문의 ui
+        salesOnUI.toggleHidden('.switch-details', '.inquiry-form');
+
+        // image modal
+        $('.photo-list .photo-item').on('click', function(e){
+            e.preventDefault();
+	        salesOnUI.modal().show('.image-pop');
+
+        })
+    });
+</script>

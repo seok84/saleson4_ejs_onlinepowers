@@ -1,0 +1,299 @@
+@import '../../common';
+
+.display-ad {
+    width: $full;
+    max-width: $width;
+    margin: 0 auto 3rem;
+
+    img {
+        display: $block;
+        width: $full;
+    }
+}
+
+// ####### display 탭메뉴
+.display-page {
+    .display-tab-wrap {
+        max-width: 119.4rem;
+        width: 100%;
+        margin: 0 auto;
+
+        &.less {
+            .btn-display-tab-more {
+                display: none;
+            }
+        }
+
+        &.on {
+            .display-tab {
+                max-height: 100%;
+            }
+
+            .btn-display-tab-more i {
+                transform: rotate(180deg);
+            }
+        }
+
+        .display-tab {
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            flex-wrap: wrap;
+            //max-height: 6.8rem;
+            overflow: hidden;
+
+            li {
+                width: auto;
+                height: 4.8rem;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 6rem;
+                color: $fontMedium;
+                background-color: $colorWhite;
+                border: 1px solid $lineMedium;
+                margin-right: 1rem;
+                margin-bottom: 2rem;
+                font-size: 1.6rem;
+                font-weight: 400;
+                padding: 0 2rem;
+                cursor: pointer;
+
+                &.on {
+                    color: $colorWhite;
+                    font-weight: 500;
+                    background-color: $brandPrimary;
+                    border: 1px solid $brandPrimary;
+                }
+
+            }
+        }
+
+        .btn-display-tab-more {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 3.6rem;
+            border-bottom: .6rem solid $lineBright;
+            margin-bottom: 2rem;
+
+            i {
+                width: 1.7rem;
+                height: 1.7rem;
+                background-image: url("/static/content/image/item/ico_arrow.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                transform-origin: center center;
+                transform: rotate(0);
+                display: none;
+            }
+        }
+    }
+
+    /* 리뷰리스트 */
+    &.display-review {
+        .filter-wrap {
+            margin-bottom: 3rem;
+        }
+    }
+
+    .review-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+        .review-box {
+            display: flex;
+            align-items: flex-start;
+            flex:none;
+            width: calc(50% - 1.5rem);
+            margin-right: 3rem;
+            margin-bottom: 3rem;
+
+            &:nth-child(2n) {
+                margin-right: 0;
+            }
+
+            &:nth-last-child(1),
+            &:nth-last-child(2) {
+                margin-bottom: 0;
+            }
+
+            .thumbnail {
+                position: relative;
+                width: 27.6rem;
+                height: 27.6rem;
+                margin-right: 3rem;
+                box-sizing: border-box;
+                border: 1px solid #f5f5f5;
+                overflow: hidden;
+
+                .thumb-img {
+                    width: 100%;
+                    height: 100%;
+                    -moz-object-fit: cover;
+                    -o-object-fit: cover;
+                    -webkit-object-fit: cover;
+                    object-fit: cover;
+                }
+            }
+
+            .content {
+                width: calc(50% - 1.5rem);
+                
+                .ico-quotes,
+                .review-text {
+                    margin-top: 2rem;
+                }
+
+                .ico-quotes {
+                    width: 2.8rem;
+                }
+
+                .review-text {
+                    display: block;
+                    line-height: 1.33;
+                    font-family: $notoSans;
+                    font-size: 1.6rem;
+                    color: $btnFontColor;
+                    word-break: keep-all;
+                    letter-spacing: -0.08rem;
+                    word-spacing: -0.02rem;
+                }
+
+                .score-wrap {
+                    margin-top: 1.6rem;
+                }
+
+                .item-title {
+                    @include ellipsis(1);
+                    margin-top: 1rem;
+                    color: $fontMedium;
+                }
+            }
+        }
+    }
+}
+
+
+@include mobile {
+    .fixed-header~.content-inner .display-page {
+        padding-top: 5rem;
+    }
+
+    .display-ad {
+        margin: 0 auto;
+    }
+
+    // ####### display 탭메뉴
+    .display-page {
+        .display-tab-wrap {
+            .display-tab {
+                max-height: 9.6rem;
+                border-bottom: 1px solid $lineLight;
+
+                li {
+                    width: calc((100% + 1.6rem)/ 3);
+                    height: 4.8rem;
+                    border-radius: 0;
+                    color: $fontBlackDark;
+                    border: 1px solid $lineLight;
+                    margin-right: 0;
+                    margin-bottom: 0;
+                    font-size: 1.4rem;
+
+                    &.on {
+                        color: $colorWhite;
+                        font-weight: 500;
+                        background-color: $brandPrimary;
+                        border: 1px solid $brandPrimary;
+                    }
+
+                    &:nth-child(3n) {
+                        border-right: 1px solid transparent;
+                        padding: .5rem 1.6rem .5rem .5rem;
+                    }
+
+                    &:nth-child(3n + 2) {
+                        width: calc(((100% + 1.6rem) / 3) - 1.6rem);
+                        padding: .5rem;
+                    }
+
+                    &:nth-child(3n + 1) {
+                        border-left: 1px solid transparent;
+                        padding: .5rem .5rem .5rem 1.6rem;
+                    }
+
+                }
+            }
+
+            .btn-display-tab-more {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                height: 3.6rem;
+                border-bottom: .6rem solid $lineBright;
+
+                i {
+                    width: 1.7rem;
+                    height: 1.7rem;
+                    background-image: url("/static/content/image/item/ico_arrow.svg");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    transform-origin: center center;
+                    transform: rotate(0);
+                    display: none;
+                }
+            }
+        }
+
+        .filter-wrap {
+            margin-top: 2rem;
+        }
+
+        /* 리뷰리스트 */
+
+        &.display-review {
+            .filter-wrap {
+                margin-bottom: 2rem;
+            }
+        } 
+
+        section.review-container {
+            padding: 0 1.6rem;
+        }
+        .review-container {
+            .review-box {
+                flex-direction: column;
+                width: 100%;
+                margin-right: 0;
+
+                .thumbnail {
+                    width: 100%;
+                    margin-right: 0;
+                    height: 0;
+                    padding-bottom: 100%;
+
+                    .thumb-img {
+                        position: absolute;
+                        top:50%;
+                        left:50%;
+                        transform: translate(-50%,-50%);
+                    }
+                }
+
+                .content {
+                    width: 100%;
+                    .ico-quotes {
+                        margin-top: 1rem;
+                    }
+                    .review-text {
+                        margin-top: 1.8rem;
+                    }
+                }
+            }
+        }
+    }
+}

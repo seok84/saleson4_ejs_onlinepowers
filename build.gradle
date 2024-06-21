@@ -1,0 +1,14 @@
+apply plugin: 'war'
+dependencies {
+    implementation 'org.springframework.boot:spring-boot-starter-web'
+    implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api:3.0.0'
+    implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl:3.0.1'
+    implementation 'org.springframework.session:spring-session-core'
+
+    providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+    providedRuntime 'org.apache.tomcat.embed:tomcat-embed-jasper'
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
+}

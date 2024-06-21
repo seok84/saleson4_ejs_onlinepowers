@@ -1,0 +1,25 @@
+<div id="top-banner">
+    <section>
+        <!-- 이미지형 -->
+        <div class="flex type1">
+            <div class="bg-left" style="background: #28B279;"></div>
+            <div class="bg-right" style="background: #f9da70;"></div>
+            <button type="button" class="top-banner-close">닫기</button>
+            <a href="javascript:;" class="pc"><img src="/static/content/image/_temp/top_banner_left.png" alt=""></a>
+            <a href="javascript:;" class="pc"><img src="/static/content/image/_temp/top_banner_right.png" alt=""></a>
+            <a href="javascript:;" class="mobile"><img src="/static/content/image/_temp/top_banner_left.png" alt=""></a>
+            <a href="javascript:;" class="mobile"><img src="/static/content/image/_temp/top_banner_right.png" alt=""></a>
+        </div>
+        <!-- 텍스트형 -->
+        <div class="flex type-text hidden">
+            <button type="button" class="top-banner-close">닫기</button>
+            탑배너 영역입니다.
+        </div>
+    </section>
+</div>
+
+<script>
+    $(document).ready(function(){
+        salesOnUI.topBanner();
+    });
+</script>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saleson</title>
+ 
+    <!-- global style -->
+    <link rel="stylesheet" href="/static/content/css/layout/layout.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="/static/content/js/common.js"></script>
+
+    <!-- ejs css select -->
+    <% if(styleNo == 0) { %>
+    <!--
+    address = mypage_address.css(o)
+    coupon = mypage_coupon.css(o)
+    favorite, recent = mypage_main.css(o)
+    grade = mypage_grade.css(o)
+    index, order-cancel, order/index, order/_id  = mypage_order.css(o)
+    review, inquery, sns-manage = mypage_review.css(o)
+    myinfo,password = mypage_myinfo.css(o)
+    point = mypage_point.css
+    -->
+    
+    <!-- favorite, recent -->
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_main.css">
+    
+    <% } else if (styleNo == 1) { %>
+    <!-- address, delivery -->
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_address.css">
+
+    <% } else if (styleNo == 2) { %>
+    <!-- coupon -->
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_coupon.css">
+
+    <% } else if (styleNo == 3) { %>
+    <!-- grade -->
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_grade.css">
+
+    <% } else if (styleNo == 4) { %>
+    <!-- index, order-cancel, order/index, order/_id -->
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_order.css">
+
+    <% } else if (styleNo == 5) { %>
+    <!-- review, inquery -->
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_review.css">
+
+    <% } else if (styleNo == 6) { %>
+    <!-- myinfo, password, sns-manage -->
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_myinfo.css">
+
+    <% } else if (styleNo == 7) { %>
+    <!-- point -->
+    <link rel="stylesheet" href="/static/content/css/pages/mypage/mypage_point.css">
+
+    <% } else { %>
+
+    <% } %>
+
+</head>
+<body>
+    <div class="fixed-header">
+        <!-- topbanner -->
+        <%- include ('topbanner') %>
+    
+        <!-- header -->
+        <header id="header" class="header-detail">
+            <%- include ('header') %>
+        </header>
+    </div>
+    
+    <!-- body -->
+    <div class="content-inner">
+        <!-- ejs layout select -->
+        <% if(indexNo == 0) { %>
+            <div class="mypage mypage-index">
+                <a href="/mypage" class="title-h1">마이페이지</a>
+                <%- include ('mypage_userinfo') %>
+                <%- include ('mypage_lnb') %>
+                <div class="mypage-inner">
+                    <%- body %>
+                </div>
+            </div>
+        
+        <% } else { %>
+            <div class="mypage">
+                <a href="/mypage" class="title-h1">마이페이지</a>
+                <%- include ('mypage_userinfo') %>
+                <%- include ('mypage_lnb') %>
+                <div class="mypage-inner">
+                    <%- body %>
+                </div>
+            </div>
+    
+        <% } %>
+        
+    </div>
+
+    
+
+    <!-- aside-menu -->
+    <aside id="aside-menu">
+        <%- include ('aside') %>
+    </aside>
+
+    <!-- footer -->
+    <footer>
+        <%- include ('footer') %>
+    </footer>
+
+    <!-- aside-menu -->
+    <div class="mobile-category">
+        <%- include ('mobile_gnb') %>
+    </div>
+
+</body>
+</html>
